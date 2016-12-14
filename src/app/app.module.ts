@@ -14,7 +14,8 @@ import { MainMenuComponent } 	  from './main-menu/main-menu.component';
 import { GetPopularService }    from './get-popular.service';
 
 const appRoutes: Routes = [
-  { path: 'series', component: SeriesComponent}
+  { path: 'series', component: SeriesComponent},
+  { path: '', component: PopularComponent}
 ];
 
 @NgModule({
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
     HttpModule,
     MaterialModule.forRoot(),
     AlertModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {useHash: false})
   ],
   providers: [GetPopularService],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'series',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute,) { }
 
   ngOnInit() {
+  	this.route.params.subscribe((param: any) => {console.log(param)});
   }
 
 }
