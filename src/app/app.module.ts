@@ -6,10 +6,12 @@ import { MaterialModule } from '@angular/material';
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
+import { PopularComponent } from './popular/popular.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PopularComponent
   ],
   imports: [
     BrowserModule,
