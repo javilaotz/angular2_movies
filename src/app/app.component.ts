@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { GetPopularService } from './get-popular.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-popular',
+  selector: 'popular',
   templateUrl: './popular.component.html',
   styleUrls: ['./popular.component.css']
 })

@@ -1,0 +1,20 @@
+.thumb_movie{
+	width: 100%;
+}
+.logo-channel{
+	width: 100%;
+}
+.popular_1{
+	padding: 10px 0 10px 10px;
+}
+.row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+.item_titulo{
+	position: absolute;
+    top: 50px;
+    color: #fff;
+    font-size: 15px;
+    margin-left: 4px;
+}
