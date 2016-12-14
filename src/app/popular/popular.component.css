@@ -1,5 +1,7 @@
 .thumb_movie{
 	width: 100%;
+	opacity: 1;
+	transition: all 1s ease;
 }
 .logo-channel{
 	width: 100%;
@@ -17,9 +19,6 @@
     color: #fff;
     font-size: 15px;
     margin-left: 4px;
-}
-.item_bg{
-
 }
 .thumb_movie:hover{
 	background-color: #000;
