@@ -1,0 +1,9 @@
+.headerBar {
+    background-color: #222;
+    height: 50px;
+    margin: auto;
+    max-width: 1600px;
+    -webkit-transition: height .3s;
+    transition: height .3s;
+    z-index: 99999;
+}

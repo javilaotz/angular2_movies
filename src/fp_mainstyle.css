@@ -1,0 +1,4061 @@
+/* ============================================================================
+FOX Play main styles
+============================================================================ */
+/* ===== VERSION 3.1 ==== */
+
+/*General elements ========================================================= */
+
+* {
+margin: 0;
+}
+#mainWrap {
+  margin-bottom: -43px;
+  min-height: 100%;
+}
+#mainWrap:after {
+  content: "";
+  display: block;
+}
+#mainContent,
+#mainContent > .container {
+  background-color: #eee;
+}
+.generalSection #mainContent .container > .containerFluid {border: none}
+#mainContent h5 {margin-bottom: 18px}
+.containerFluid.gutter10 {
+  background: #000;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-width: 1610px;  
+}
+.containerFluid.gutter10 .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.generalSection #wrapper {padding-top: 60px}
+
+aside .bpS100.bpM100 > h5 {margin: 0 0 18px 0}
+
+.imgRounded {border-radius: 6px}
+
+.centerBlock {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pullRight {float: right !important}
+.pullLeft {float: left !important}
+.hide {display: none !important}
+.show {display: block !important}
+.invisible {visibility: hidden}
+.textHide {
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.link {text-decoration: underline!important}
+.link:hover {text-decoration: none!important}
+
+.lineDivider {
+  background-color: #d8d8d8;
+  height: 1px;
+  width: 100%;
+}
+
+.clear {clear: both}
+
+.loading {
+  padding: 10px;
+  text-align: center;
+}
+#modal .loading {padding: 50px 0 30px 0}
+
+.list-style {
+  font-size: .875em;
+  list-style: square outside;
+  margin: 24px 0;
+  padding-left: 24px;
+}
+.list-style li { padding-bottom: 12px}
+
+/* ============== Common styles ============================================ */
+
+html, body {height:100%}
+
+body {
+  color: #333;
+  background-color: #000;
+  overflow-x: hidden !important;
+  background-position: center 100px !important;
+  background-repeat: no-repeat !important
+}
+
+.bold {font-weight: bold !important}
+
+.bodyWhite {background: #FFF}
+
+.black {color:#000}
+
+.pt5 {padding-top:5px}
+.pt10 {padding-top:10px}
+.pt15 {padding-top:15px}
+.pt20 {padding-top:20px}
+.pt25 {padding-top:25px}
+.pt30 {padding-top:30px}
+.pt40 {padding-top:40px}
+
+.pb5 {padding-bottom:5px}
+.pb10 {padding-bottom:10px}
+.pb15 {padding-bottom:15px}
+.pb20 {padding-bottom:20px}
+.pb25 {padding-bottom:25px}
+.pb30 {padding-bottom:30px}
+.pb40 {padding-bottom:40px}
+
+.p10 {padding:10px}
+.noPadding {padding-left:0!important; padding-right:0!important}
+
+.noBorder {border:none!important}
+
+.mr5 {margin-right:5px!important}
+.mr10 {margin-right:10px!important}
+.mr15 {margin-right:15px!important}
+.ml5 {margin-left:5px!important}
+.ml10 {margin-left:10px!important}
+.mr20 {margin-right:20px!important}
+.ml20 {margin-left:20px!important}
+.mr30 {margin-right:30px!important}
+.ml30 {margin-left:30px!important}
+.noMargin {margin-left:0!important; margin-right:0!important}
+
+.mt5 {margin-top:5px}
+.mt10 { margin-top:10px!important}
+.mt12 {margin-top:12px}
+.mt15 {margin-top:15px}
+.mt20 {margin-top:20px}
+.mt25 {margin-top:25px}
+.mt30 {margin-top:30px}
+.mt35 {margin-top:35px}
+.mt40 {margin-top:40px}
+
+.mb5 {margin-bottom:5px}
+.mb10 {margin-bottom:10px}
+.mb15 {margin-bottom:15px!important}
+.mb20 {margin-bottom:20px}
+.mb25 {margin-bottom:25px}
+.mb30 {margin-bottom:30px}
+.mb35 {margin-bottom:35px}
+.mb40 {margin-bottom:40px}
+.mbReset {margin-bottom:0!important}
+
+.mReset {margin:0!important}
+.pReset {padding:0!important}
+.topReset {top:0!important}
+.rightReset {right:0!important}
+.bottomReset {bottom:0!important}
+.leftReset {left:0!important}
+
+.relative {position:relative}
+.absolute {position:absolute!important}
+
+.dBlock {display:block}
+.dBlockInline {display:inline-block!important}
+.Dnone {display:none}
+.tCenter {text-align:center}
+.textRight {text-align:right}
+.textLeft {text-align:left}
+
+.gutterVertical10{margin-top:5px;margin-bottom:5px}
+.gutterVertical20{padding-top:10px;padding-bottom:10px}
+div.label.mt0 {top:0}
+
+/******************* NO BORRAR FIX PARA GRILLA HOME PAGE */
+figure.hl2 {overflow:hidden}
+figure.hl2 img.imgResponsive {max-width: 101%!important}
+/******************* NO BORRAR FIX PARA GRILLA HOME PAGE */
+
+.ajaxLoading:after {
+  content: url(http://cdn.foxplay.com/sites/foxplay-la/files/img/ajax-loader.gif)!important;
+  margin: 0 auto 15px auto
+}
+
+.searchLoading:after {
+  background-image: url("http://cdn.foxplay.com/sites/foxplay-la/files/img/ajax-loader.gif") !important;
+  content: "";
+  display: block;
+  height: 25px;
+  margin: 15px auto;
+  position: relative;
+  width: 25px
+}
+
+#eplAdDivskin {position:absolute}
+#eplAdDivpushdown {margin:0 auto; width:960px}
+div[epl_skin="auxDiv"] {display: none}
+
+/* ================= Colors styles ========================================= */
+
+/*fonts*/
+.seriesColor, #series .cbpHeader .active > a,
+#series .cbpHeader li.active .vecMenuArrow path {
+  color:#ff6c00;
+  fill: #ff6c00;
+} /*orange*/
+
+.sportsColor, #sports .cbpHeader .active > a,
+#sports .cbpHeader li.active .vecMenuArrow path {
+  color:#009ee0;
+  fill:#009ee0;
+} /*light blue*/
+
+.moviesColor, #movies .cbpHeader .active > a,
+#movies .cbpHeader li.active .vecMenuArrow path {
+  color:#e3003e;
+  fill:#e3003e
+} /*pink*/
+
+.lifeStyleColor, #lifestyle .cbpHeader .active > a,
+#lifestyle .cbpHeader li.active .vecMenuArrow path {
+  color:#b60098;
+  fill:#b60098
+} /*fucsia*/
+
+.factualColor, #factual .cbpHeader .active > a,
+#factual .cbpHeader li.active .vecMenuArrow path {
+  color:#fabb00;
+  fill:#fabb00
+} /*yellow*/
+
+.movieCityColor {color:#243c6a} /*dark blue*/
+
+#series.fx .cbpHeader .active a, #series.fx .cbpHeader .active a:hover,
+#series.fx .cbpHeader a:hover, #series.fx .cbpHeader li:hover > a,
+#series.fx .cbpHeader li:hover .vecMenuArrow path,
+#series.fx .cbpHeader li.active .vecMenuArrow path {
+  color:#d32027;
+  fill:#d32027
+} /*red*/
+
+.cBlack {color:#000}
+.cRed {color:#d1353b!important}
+.cWhite {color:#fff!important}
+
+.search .srchBar:focus, 
+.containerFluid.gutter10 *, #showMenu a,
+.profileConnect .social a, #profile .sliderMask.thumbs h4 b,
+#profile .sliderMask.thumbs h3, .navbarInner .stats a {
+  color:#fff
+}
+
+#profile #headerHero .SocialConnect .profileConnect span.vectors svg path,
+#profile #modal.modalBox span.vectors svg.fb path,
+#profile #modal.modalBox span.vectors svg.tw path,
+.modal-invitation .iconsX2:hover path, .modal-invitation .iconsX2:hover rect {
+  fill: #fff
+}
+
+#mainContent *, #powerTip *, .modalBox *, #profile #headerSection select {
+  color:#333
+} /*dark gray*/
+
+/*backgrounds */
+.seriesBg {background-color:#ff6c00} /*orange*/
+.sportsBg, #sports .seriesBg {background-color:#009ee0} /*light blue*/
+.moviesBg, #movies .seriesBg {background-color:#e3003e} /*pink*/
+.lifestyleBg, #lifestyle .seriesBg {background-color:#b60098} /*fucsia*/
+.factualBg, #factual .seriesBg {background-color:#fabb00} /*yellow*/
+.movieCityBg, #movieCity .seriesBg {background-color:#243c6a} /*dark blue*/
+
+.bBlack {background-color:#000}
+.bWhite {background-color:#fff!important}
+.bGray {background-color:#333!important}
+.bSoftGray {background-color:#eee!important}
+
+
+/* ===================== Fonts styles ====================================== */
+
+body {
+  text-rendering: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+a:hover {
+  -webkit-transition: linear .1s;
+  -moz-transition:    linear .1s;
+  transition:         linear .1s
+}
+
+h1, h2, .overText, #headerSection h1, #profile #headerSection h3,
+#mainContent h1, .profileConnect .social a, #modal h5, .secndBtn,
+#profile #mainContent h1, #home #headerSection #auth01 h2 span {
+  font-weight:100
+} /*thin*/
+
+#headerSection .headerInfo h1.mt10 {font-size: 1.700em!important}
+#headerSection .headerInfo h4 {font-size: 1.050em}
+
+h3, h4, h5, .label span, a, .label p, .label li, #showMenu *, 
+.auxBtn, .outBtn, #filters *, #scheduleContainer *,
+#modal p, #mainContent .sectionBtn .dropDownBox *, #profileMenu *,
+#profile #mainContent h2, #mainContent .sliderMask h4 b,
+#mainContent .details P, article.featuredRelatedRecipe HEADER H1,
+article.featuredRelatedRecipe HEADER H2, #profile ol li {
+  font-weight:300
+} /*light*/
+
+body, .label b, .contentList div *,
+#mainContent #scheduleItems h4, #headerSection h6,
+#profileMenu a span,
+#mainContent .details ul li H5 {
+  font-weight:400
+} /*regular*/
+
+strong {font-weight:500}
+
+b, #headerSection h4 b,
+#mainContent .details P strong {
+  font-weight:700
+} /*bold*/
+
+/* sizes ------ */
+.label b, .sectionBtn {
+  font-size: 1.2rem;
+  list-style: none;
+}  /*on psd 11px*/
+
+#powerTip .font12,
+#profileMenu a span, #profile #alerts section ol li a,
+.Season .SeasonList ul li div span.venc {
+  font-size:.750em
+} /*on psd 12px*/
+
+
+h3, h4, p, span, strong, .label li, #filters option,
+h4 small, h6, .overText.Small, #mainContent .sliderMask h4,
+.cbpInner #mainMenu li.tags a, #daySelector *, .styledSelect select,
+#mainContent #scheduleItems h4, .relatedFeatured article HEADER H2,
+.flexslider article HEADER H2, .scrollingHeadSection .container header h3,
+.headerInfo H3, #mainContent .flexslider.relatedVideo article h4,
+#mainContent .details ul li H5, #moreAbout #mainContent h4 {
+  font-size:.875em
+} /*on psd 14px*/
+
+h5, .label h3, .highlight .label h4, #filters input, 
+#mainContent h4, #hours span, #stripHours span, #moreAbout h3, .secndBtn,
+.outBtn, .profileConnect a, #modal p, .overlayPlayer b, .auxBtn,
+.headerInfo form label, #profileMenu a, #profile #mainContent h2,
+#profile #mainContent .sliderMask h4, .relatedFeatured article HEADER H1,
+.flexslider article HEADER H1, #profile #alerts section ol li h3 b,
+.profileBadge p, .accordion header h3,.noAccordion header h3 {
+  font-size:1.125em
+} /*on psd 18px*/
+
+.mainBtn, .overText.Big, #headerSection .headerInfo.bpM100 h1, #auth h2,
+#auth h3, #auth h4 , .overlayPlayer h4 b, #powerTip h2, .headerInfo H2,
+.scrollingHeadSection .container header h1, .flexespeciales article H1 {
+  font-size:1.500em
+} /*on psd 24px*/
+
+#scheduleItems h2 {font-size:1.2em}
+
+h2, #auth h1 {font-size:1.875em} /*on psd 30px*/
+
+#profile #mainContent h1, .headerInfo H1, #lifestyle .details H2 {
+  font-size:2.250em
+} /*on psd 36px*/
+
+#modal h5, #search h2 {font-size:2.375em} /*on psd 38px*/
+
+h1, .highlight h1, #profile #headerSection h3, #headerHero .headerInfo h1,
+.highlight .complex h1, #auth .Operator h1 {
+  font-size:2.5em
+} /*on psd 48px*/
+
+#home .highlight .row .bpM100.bpS100 .label {max-width: 29%}
+#home .highlight .row .bpM100.bpS100.complex .label {min-width: 40%}
+
+#home .soft .sectionLogo.home, #home .soft .sectionLogo.home,
+.HLboxes.soft .sectionLogo.home {
+  display:none
+}
+
+.headerHero h1 {width: 400px !important}
+
+p strong {font-size: inherit!important} /* fija size las etiquetas anidadas */
+
+
+  .highlight .sectionLogo.home,
+  .HLboxes .sectionLogo.home {
+    top: 10px; right: 15px; position: absolute; opacity: .7; z-index: 11
+  }
+  .highlight .sectionLogo.home .vectors svg,
+  .HLboxes .sectionLogo.home .vectors svg {
+    width: 60px; height: 25px
+  }
+  .highlight .sectionLogo.home .vectors.vecLogoFox svg,
+  .HLboxes .sectionLogo.home .vectors.vecLogoFox svg {
+    width: 49px; height: 21px
+  }
+  .highlight .sectionLogo.home .vectors.vecLogoMundoFox svg,
+  .HLboxes .sectionLogo.home .vectors.vecLogoMundoFox svg {
+    width: 90px; height: 25px
+  }
+  .highlight .sectionLogo.home .vectors.vecLogoNatGeo svg,
+  .HLboxes .sectionLogo.home .vectors.vecLogoNatGeo svg {
+    height: 25px; width: 75px
+  }
+  .highlight .sectionLogo.home .vectors.vecLogoFoxSports svg,
+  .HLboxes .sectionLogo.home .vectors.vecLogoFoxSports svg  {
+    height: 33px; width: 55px
+  }
+  .highlight .sectionLogo.home .vectors.vecLogoFoxLife svg,
+  .HLboxes .sectionLogo.home .vectors.vecLogoFoxLife svg {
+    height: 28px; width: 75px
+  }
+  .highlight .sectionLogo.home .vectors.vecLogoFx svg,
+  .HLboxes .sectionLogo.home .vectors.vecLogoFx svg {
+    width: 35px; height: 21px
+  }
+  .highlight .sectionLogo.home .vectors.vecLogoTheFilmZone svg,
+  .HLboxes .sectionLogo.home .vectors.vecLogoTheFilmZone svg {
+    height: 40px; width: 40px
+  }
+  .HLboxes .sectionLogo.home .foxsportspremium svg{ height: 32px; width: 70px; }
+  .highlight .sectionLogo.home .vectors.vecLogoCinecanal svg,
+  .HLboxes .sectionLogo.home .vectors.vecLogoCinecanal svg {
+    height: 40px; width: 50px
+  }
+  #home .soft .sectionLogo.home, #home .soft .sectionLogo.home,
+  .HLboxes.soft .sectionLogo.home {
+    display:none
+  }
+
+.uppercase {text-transform: uppercase}
+.noUppercase {text-transform: none}
+
+
+/* =================== Buttons styles ====================================== */
+.mainBtn {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 12px 25px;
+  display:inline-block !important;
+  font-weight:100
+}
+.mainBtn:hover {
+  background: #FFF;
+  color: #000;
+}
+
+.secndBtn {
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:4px;
+  color:#fff!important;
+  border:none;
+}
+
+.editBtn, .saveBtn {
+  background-color:#ddd;
+  padding:9px 20px;
+  font-size:18px;
+  font-weight:300;
+  border-radius:4px;
+  box-shadow:0 1px 0 #B8B8B8;
+  border:none;
+}
+
+.auxBtn {
+  background-color:#fff;
+  border:1px solid #000;
+  border-radius: 5px;
+  padding: 12px 25px
+}
+
+.sectionBtn span {margin-bottom:10px; display:block}
+.hiddenX .sectionBtn span {margin-bottom: 0}
+
+.authBtn {
+  display:inline-block;
+  background-color:#eee;
+  padding:12px 20px;
+  border-radius:4px;
+  color:#000!important;
+  border:none
+}
+
+.forgotPin, .changePin {background:none; border:none; font-size:.9em}
+
+
+/* ================== Colors sections ====================================== */
+
+.generalSection .barColor, #home .barColor, .barColor {
+  background: #ff6c00;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNmMwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iI2I2MDA5OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwOWVlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iI2E1YmEwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmYWJiMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(left,  #ff6c00 0%, #b60098 25%, #009ee0 50%, #e3003e 75%, #fabb00 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff6c00), color-stop(25%,#b60098), color-stop(50%,#009ee0), color-stop(75%,#e3003e), color-stop(100%,#fabb00));
+  background: -webkit-linear-gradient(left,  #ff6c00 0%,#b60098 25%,#009ee0 50%,#e3003e 75%,#fabb00 100%);
+  background: -o-linear-gradient(left,  #ff6c00 0%,#b60098 25%,#009ee0 50%,#e3003e 75%,#fabb00 100%);
+  background: -ms-linear-gradient(left,  #ff6c00 0%,#b60098 25%,#009ee0 50%,#e3003e 75%,#fabb00 100%);
+  background: linear-gradient(to right,  #ff6c00 0%,#b60098 25%,#009ee0 50%,#e3003e 75%,#fabb00 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6c00', endColorstr='#fabb00',GradientType=1 )
+}
+
+#scheduleItems .row > div:last-child:after {
+  border-bottom: 1px solid #ccc;
+  content: "";
+  height: 160px;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  width: 100%
+}
+
+/*Series  ---------------  */
+#series .barColor, .series .label b, #series .label b, .highlight .label b,
+#series .navSection {
+  background:#f56800
+}
+#series #showMenu li:hover, #series #showMenu li.active {
+  background-color:#e56100
+}
+#series #showMenu li:first-child {border-left:1px solid #e56100}
+#series #showMenu li {border-right:1px solid #e56100}
+#scheduleItems .series {box-shadow:inset 2px 0 0 #e56100}
+#series #showMenu li:hover:after, #series #showMenu li.active:after {
+  border-top: 6px solid #e16300
+}
+#series .contentList .iconsX1:hover {fill:#333}
+span.bWhite {padding: 5px; margin: 0 10px 0 -5px}
+
+/*Sports  ---------------  */
+#sports .barColor,
+.sports .label b,
+#sports .label b,
+#sports .navSection,
+#search .featuredRelatedRecipe.vivo .label b {
+  background:#009ee0
+}
+#sports #showMenu li:hover,
+#sports #showMenu li.active {
+  background-color:#008ec9
+}
+#sports #showMenu li:first-child {border-left:1px solid #008ec9}
+#sports #showMenu li {border-right:1px solid #008ec9}
+#scheduleItems .sports > div,
+#sportsItems .sports {
+  box-shadow:inset 2px 0 0 #008ec9
+}
+#sports #showMenu li:hover:after,
+#sports #showMenu li.active:after {
+  border-top: 8px solid #008ec9
+}
+#sports .contentList .iconsX1:hover {fill:#009ee0}
+#sports .relatedFeatured li svg.iconsX2,
+#search .flexslider li svg.iconsX2 {
+  height: 30px;
+  width: 30px;
+}
+#sports .flexslider li header span,
+#search .flexslider li header span {
+  bottom: 0;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+}
+#sports .flexslider .resultados li, #sports .flexslider .resultados li article {
+  height: 170px;
+  margin-right: 20px;
+  width: 300px!important;
+}
+#sports .resultados h1 {
+  font-size: 3.5em;
+  margin-bottom: 5px;
+}
+#sports .resultados h1 .smallText {
+  color: #999!important;
+  font-size: .7em;
+  margin: 0 5px;
+}
+#sports .resultados h2 {
+  color: #009ee0;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 5px 0;
+}
+#sports .resultados h3 {font-size:.91em}
+
+#sports .resultados .bGray h1,
+#sports .resultados .bGray span,
+#sports .resultados .bGray h3 {
+  color: white!important
+}
+#sports .resultados .bGray h3 strong {color:#999!important}
+.sportsBlack {background-color:#111}
+.sportsBlack.widgetIframe {background-color:#13191f}
+.widgetIframe {padding: 10px 0}
+
+.relatedVideo.sportsBlack {
+  border-bottom: 1px #ccc solid;
+  border-top: 1px #202020 solid!important;
+  margin-bottom:40px!important;
+  padding-top: 55px
+}
+.relatedVideo.sportsBlack:before {
+  content:"";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #151515
+}
+.sportsBlack h3 b {color: white}
+.wStatic {padding:0 10px; width:480px}
+
+/*Movies  ---------------  */
+#movies .barColor, .movies .label b, #movies .label b, #movies .navSection {
+  background:#e3003e
+}
+#movies #showMenu li:hover, #movies #showMenu li.active {
+  background-color:#389900
+}
+#movies #showMenu li:first-child {border-left:1px solid #389900}
+#movies #showMenu li {border-right:1px solid #389900}
+#scheduleItems .movies {box-shadow:inset 2px 0 0 #389900}
+#movies #showMenu li:hover:after,
+#movies #showMenu li.active:after {
+  border-top: 8px solid #389900;
+}
+#movies .contentList .iconsX1:hover {fill:#e3003e}
+
+/*Lifestyle  ---------------  */
+#lifestyle .barColor, .lifestyle .label b, #lifestyle .label b,
+#lifestyle .navSection {
+  background:#b60098
+}
+#lifestyle #showMenu li:hover, #lifestyle #showMenu li.active {
+  background-color:#a30089
+}
+#lifestyle #showMenu li:first-child {border-left:1px solid #a30089}
+#lifestyle #showMenu li {border-right:1px solid #a30089}
+#scheduleItems .lifestyle > div {box-shadow:inset 2px 0 0 #a30089}
+#lifestyle #showMenu li:hover:after, #lifestyle #showMenu li.active:after {
+  border-top: 8px solid #a30089
+}
+.bpM18.bpS16.pullLeft.bWhite img {width: 100%; display:block}
+.figure-slide article figure {
+  max-height: 125px;
+  overflow: hidden;
+  margin-bottom: 7px
+}
+.figure-special article figure {
+  max-height: 156px;
+  overflow: hidden;
+}
+#lifestyle .figure-special h1 {font-size: 1.5em}
+
+.headerInfo {margin: 0 0 20px 0}
+.event .headerInfo {margin: 20px 0 20px 0}
+
+/*Factual  ---------------  */
+#factual .barColor, .factual .label b, #factual .label b, #factual .navSection{
+ background:#fabb00
+}
+#factual #showMenu li:hover, #factual #showMenu li.active {
+  background-color:#e1a800
+}
+#factual #showMenu li:first-child {border-left:1px solid #e1a800}
+#factual #showMenu li {border-right:1px solid #e1a800}
+#scheduleItems .factual > div {box-shadow:inset 2px 0 0 #e1a800}
+#factual #showMenu li:hover:after, #factual #showMenu li.active:after {
+  border-top: 8px solid #e1a800
+}
+#factual .contentList .iconsX1:hover {fill:#fabb00}
+
+/*Moviecity  ---------------  */
+#movieCity .barColor,
+.movieCity .label b,
+#movieCity .label b,
+#movieCity .navSection {
+  background: #243c6a;
+}
+#movieCity #showMenu li:hover,
+#movieCity #showMenu li.active {
+  background-color:#17294c
+}
+#movieCity #showMenu li:first-child {border-left:1px solid #17294c}
+#movieCity #showMenu li {border-right:1px solid #17294c}
+#scheduleItems .movieCity {box-shadow:inset 2px 0 0 #243c6a}
+#movieCity #showMenu li:hover:after, #movieCity #showMenu li.active:after {
+  border-top: 8px solid #17294c
+}
+#movieCity .contentList .iconsX1:hover {fill:#243c6a}
+
+/*Kids  ---------------  */
+#kids .barColor, .kids .label b, #kids .label b, #kids .navSection {
+  background:#3FAC00
+}
+#kids #showMenu li:hover, #kids #showMenu li.active {background-color:#389900}
+#kids #showMenu li:first-child {border-left:1px solid #389900}
+#kids #showMenu li {border-right:1px solid #389900}
+#scheduleItems .kids {box-shadow:inset 2px 0 0 #389900}
+#kids #showMenu li:hover:after, #kids #showMenu li.active:after {
+  border-top: 8px solid #389900
+}
+#kids .contentList .iconsX1:hover {fill:#3FAC00}
+
+/*Series Red  ---------------  */
+#series.fx .barColor, .fx .label b, #series.fx .label b,
+#series.fx .navSection {
+  background:#d32027
+}
+#series.fx #showMenu li:hover, #series.fx #showMenu li.active {
+  background-color:#bd1908
+}
+#series.fx #showMenu li:first-child {border-left:1px solid #bd1908}
+#series.fx #showMenu li {border-right:1px solid #bd1908}
+#scheduleItems .fx {box-shadow:inset 2px 0 0 #d32027}
+#series.fx #showMenu li:hover:after, #series.fx #showMenu li.active:after {
+  border-top: 8px solid #bd1908
+}
+#series.fx .contentList .iconsX1:hover {fill:#d32027}
+
+/* ============================================================================
+Begin specific sections & modules
+============================================================================ */
+
+/* ---------------------  Main Header styles  ------------------------------ */
+
+.barColor {height:1px; width:100%}
+.Opa {opacity:0}
+.cbpHeaderShrink .Opa {opacity:1; transition: opacity 1.2s}
+
+.scrollingHeadSection + .container.noPadding section.containerFluid {
+  margin-top: 300px
+}
+
+/*Main menu*/
+.cbpHeader.navbarFixedTop {top:0!important; position:fixed}
+.dropDownBox li ol {float:left; padding:0 10px; width:220px}
+.sectionBtn.dropDown, .ActionIcons.hiddenX a.sectionBtn {
+  overflow: visible!important;
+  opacity: 1!important
+}
+.dropDownBox li:first-child ol {width:200px; box-shadow:none}
+
+.cbpInner #mainMenu > li:last-child .dropDownBox {right:0}
+
+/*Menu drop down Country*/
+.country .dropDownBox {
+  position:absolute;
+  background-color:#fff;
+  padding: 10px 10px 0;
+  z-index:1;
+  width:210px;
+  height: 210px;
+  right: -18px;
+  -moz-box-shadow:    1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow:         1px 1px 1px 1px #ccc;
+  -webkit-border-radius:  4px;
+  -moz-border-radius:     4px;
+  -o-border-radius:       4px;
+  border-radius:          4px
+}
+.country .dropDownBox ol {
+  width:202px;
+  height: 100%;
+  overflow-y: scroll;
+  margin: -5px -2px
+}
+.country .dropDownBox ol li, .othersOp .dropDownBox ol lo {list-style: none}
+.country .dropDownBox ol li .flag {float:left; margin: 0 10px 0 0}
+.country .dropDownBox ol li span {
+  font-size: 1em;
+  font-weight: 300;
+  float:left;
+  line-height: 28px
+}
+.country span.arrows {margin: 0; cursor: pointer}
+
+.country .dropDownBox:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 19px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff
+}
+
+/* Player 2 */
+span.dropDown.country.option.relative {font-size: 1.5em}
+span.dropDown.country.option.relative ol li span {float:none}
+.country.option .dropDownBox {width: 130px; height: 75px}
+.country.option .dropDownBox ol {overflow-y: hidden!important}
+h6.bpM25.pullRight.mReset {margin-top: -10px!important}
+h6.expires {font-size:.8em; font-weight: bold!important}
+.secndBtn.usuario {background: #CCC!important; color: #333!important}
+.expires ul li:before {
+  content: "• ";
+  color: #ff6c00;
+  font-size: 16px;
+  margin: 0 -3px 0 0;
+  font-weight: 900
+}
+.modalInformation .sectionRating,
+#powerTip .sectionRating {
+  display: inline-block
+}
+
+.othersOp .dropDownBox2 {
+  position:absolute;
+  background-color:#fff;
+  padding: 10px;
+  z-index:4;
+  width:189px;
+  right: -7px;
+  -moz-box-shadow:    1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow:         1px 1px 1px 1px #ccc;
+  -webkit-border-radius:  4px;
+  -moz-border-radius:     4px;
+  -o-border-radius:       4px;
+  border-radius:          4px;
+  top: 4px;
+  margin: 12px 0 0 0
+}
+
+#auth .dropDown.othersOp .dropDownBox2,
+#home .dropDown.othersOp .dropDownBox2, #auth01 span .dropDownBox2 {
+  font-size: 1.2em!important;
+  width: 115px
+}
+.othersOp .dropDownBox2 ol {width:178px; height: 100%; margin: -5px -2px}
+.othersOp .dropDownBox2 ol li {list-style: none}
+.othersOp .dropDownBox2 ol li a {display: block}
+.othersOp .dropDownBox2 ol li a:hover,
+.videoPlayM .overlayPlayer .dropDownBox2 a:hover {
+  display: block;
+  font-weight: bold
+}
+
+.authContainer .textAuthSmall.dropDown.othersOp,
+#auth01 h5.textAuthSmall.dropDown.othersOp, .othersOp {
+  cursor: pointer
+}
+
+.othersOptions {
+  position: absolute;
+  background-color: #fff;
+  padding: 10px 10px 0;
+  z-index: 1;
+  width: 165px;
+  right: -18px;
+  -moz-box-shadow:    1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow:         1px 1px 1px 1px #ccc;
+  -webkit-border-radius:  4px;
+  -moz-border-radius:     4px;
+  -o-border-radius:       4px;
+  border-radius:          4px;
+  padding: 10px 10px;
+  font-size: 1.2em;
+  text-align: left;
+  line-height: 1.5
+}
+.othersOptions .dropDownBox:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 19px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff
+}
+.country span.arrows {margin: 0; cursor: pointer}
+
+.country .dropDownBox:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 19px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff
+}
+
+/* Player 2 */
+span.dropDown.country.option.relative {font-size: 1.5em}
+span.dropDown.country.option.relative ol li span {float:none}
+.country.option .dropDownBox {width: 130px; height: 75px}
+.country.option .dropDownBox ol {overflow-y: hidden!important}
+h6.bpM25.pullRight.mReset {margin-top: -10px!important}
+h6.expires {font-size:.8em; font-weight: bold!important}
+.secndBtn.usuario {background: #CCC!important; color: #333!important}
+.expires ul li:before {
+  content: "• ";
+  color: #ff6c00;
+  font-size: 16px;
+  margin: 0 -3px 0 0;
+  font-weight: 900
+}
+
+.othersOp .dropDownBox2 {
+  position:absolute;
+  background-color:#fff;
+  padding: 10px;
+  z-index:4;
+  width:189px;
+  right: -7px;
+  -moz-box-shadow:    1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow:         1px 1px 1px 1px #ccc;
+  -webkit-border-radius:  4px;
+  -moz-border-radius:     4px;
+  -o-border-radius:       4px;
+  border-radius:          4px;
+  top: 4px;
+  margin: 12px 0 0 0
+}
+
+#auth .dropDown.othersOp .dropDownBox2,
+#home .dropDown.othersOp .dropDownBox2, #auth01 span .dropDownBox2 {
+  font-size: 1.2em!important;
+  width: 115px
+}
+.othersOp .dropDownBox2 ol {width:178px; height: 100%; margin: -5px -2px}
+.othersOp .dropDownBox2 ol li {list-style: none}
+.othersOp .dropDownBox2 ol li a {display: block}
+.othersOp .dropDownBox2 ol li a:hover,
+.videoPlayM .overlayPlayer .dropDownBox2 a:hover {
+  display: block;
+  font-weight: bold
+}
+
+.authContainer .textAuthSmall.dropDown.othersOp,
+#auth01 h5.textAuthSmall.dropDown.othersOp, .othersOp {
+  cursor: pointer
+}
+
+.othersOptions {
+  position: absolute;
+  background-color: #fff;
+  padding: 10px 10px 0;
+  z-index: 1;
+  width: 165px;
+  right: -18px;
+  -moz-box-shadow:    1px 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow:         1px 1px 1px 1px #ccc;
+  -webkit-border-radius:  4px;
+  -moz-border-radius:     4px;
+  -o-border-radius:       4px;
+  border-radius:          4px;
+  padding: 10px 10px;
+  font-size: 1.2em;
+  text-align: left;
+  line-height: 1.5
+}
+.othersOptions .dropDownBox:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 19px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff
+}
+
+.othersOp .dropDownBox2:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff
+}
+
+/* Season */
+.ui-accordion-header {outline: none !important}
+
+.seasonList.active svg.iconsX1 .svgFill,
+.seasonScroll.active svg.iconsX1 .svgFill,
+.modal-invitation .iconsX2:hover .svgFill {
+  fill: #333;
+  visibility:visible
+}
+.seasonList.active svg.iconsX1 .svgStrokeSeason,
+.seasonScroll.active svg.iconsX1 .svgStrokeSeason {
+  fill: white;
+  visibility:visible
+}
+.SeasonLabel.active svg, .ui-accordion-header-active svg {
+  transform:          rotate(180deg);
+  -webkit-transform:  rotate(180deg);
+  -moz-transform:     rotate(180deg);
+  rotation: 180deg
+}
+.SeasonList.contentList div *,
+.accordion .bullet.seriesBg, .noAccordion .bullet.seriesBg {
+  display: inline-block;
+  line-height: 100%
+}
+.SeasonContent .flexslider article {
+  box-shadow: none;
+  height: inherit;
+  position: relative;
+  width: 220px
+}
+.SeasonContent aside ul li {width: 220px!important}
+.SeasonContent aside .flexslider {
+  padding-top: 0!important;
+  padding-bottom: 20px
+}
+.SeasonLabel {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 300;
+  letter-spacing: -1px
+}
+.accordion nav, .noAccordion nav {margin: -35px 0 17px 0}
+.accordion aside.containerFluid, .noAccordion aside.containerFluid {
+  border-bottom: none
+}
+.Season aside figure, section .relatedVideo article figure,
+#search section article.relatedVideo figure,
+#home main .relatedVideo .slides figure {
+  max-height: 125px;
+  overflow: hidden;
+  margin-bottom: 7px
+}
+.news_horizontal_list article figure {
+  max-height: 117px;
+  overflow: hidden;
+  margin-bottom: 7px
+}
+.news_horizontal_list h1,
+#sports .slides article header h1 {
+  font-size: 1.7rem;
+  line-height: 1em;
+}
+ .news_horizontal_list h3 {font-size: 1.4rem!important;} 
+.accordion header h3 {border-top: 1px solid #CCC}
+.accordion header:first-child h3, .noAccordion header h3 {
+  border:none;
+  padding-top:20px
+}
+.accordion h3.seasonTitle, .noAccordion h3.seasonTitle {
+  cursor: pointer;
+  text-transform: uppercase
+}
+.accordion .flex-viewport, .accordion .flex-direction-nav,
+.clear .flex-viewport {
+  margin-top: -10px;
+  margin-bottom:10px
+}
+.accordion .relatedVideo .flex-direction-nav a {top: 18%}
+.containerFluid.bWhite.SeasonAll {border-bottom: 1px solid #CCC}
+.bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 20px;
+  border: solid 1px #f56800;
+  margin-bottom: 2px
+}
+
+.venc:before {
+  color: #F56800;
+  content: "• ";
+  font-size: 14px;
+  font-weight: 900!important;
+  margin-left: -4px
+}
+#series .venc:before {color: #ff6c00} /*orange*/
+#sports .venc:before {color: #009ee0} /*light blue*/
+#movies .venc:before {color: #e3003e} /*pink*/
+#lifestyle .venc:before {color: #b60098} /*fucsia*/
+#factual .venc:before {color: #fabb00} /*yellow*/
+#movieCity .venc:before {color: #243c6a} /*dark blue*/
+.SeasonContent aside .vecIconPlay {
+  top: 75px;
+  bottom: auto;
+  width: 32px;
+  height: 32px
+}
+.SeasonContent h3 {font-size: 1em!important;line-height: 16px}
+.SeasonContent .slides img {margin-bottom: 10px}
+.SeasonContent nav {margin-top: -35px;margin-bottom: 15px}
+.relatedVideo .slides h3 {line-height: 16px}
+.relatedVideo .slides li article figure {
+  overflow: hidden;
+  margin-bottom: 10px;
+  max-height: 124px
+}
+.SeasonList svg.iconsX2 {width: 30px; height: 30px}
+.SeasonContent .flex-direction-nav li a {top: 45px!important}
+.noSlide li img {max-width: 100%;height: auto; margin-bottom: 10px}
+.noSlide li, .SeasonList ul.bpM81.bpS75 {margin-bottom: 20px}
+.noSlide h3 {font-size: 1em;line-height: 16px}
+.noSlide .relatedVideo span.vecIconPlay {width: 30px; height:30px}
+.bpS100.bpM100.ver {
+  border-top: solid 1px #CCC;
+  border-bottom: solid 1px #CCC;
+  text-align: center;
+  padding: 10px 0;
+  font-size: .9em;
+  cursor:pointer
+}
+.noSlide label.tittle {font-size: 1em;margin-top: 5px;font-weight: 300}
+.noSlide .vecArrowFilter {margin-top: -5px}
+section.containerFluid.noSlide, aside.containerFluid {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 20px
+}
+
+.containerFluid aside.containerFluid,
+.containerFluid main .Season aside.containerFluid .container,
+#mainContent .container aside.containerFluid:last-child,
+#mainContent .containerFluid aside.containerFluid:last-child .container {
+  border-bottom: none
+}
+.containerFluid aside.containerFluid .container {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 20px
+}
+.noSlide .relatedVideo li {height: 170px}
+
+/*Europe: main menu tags*/
+#mainMenu li.tags {
+  height:25px;
+  background-color:#333;
+  margin:19px 20px 0 0;
+  border-radius:3px;
+  line-height:25px
+}
+#mainMenu li.tags a {padding:7px 12px; line-height:inherit}
+
+.cbpHeader.cbpHeaderShrink #mainMenu li.tags {margin-top:7px}
+
+/*Main menu mobile*/
+.menuMobile {
+  height:25px;
+  width:25px;
+  line-height:50px;
+  margin-top: 16px;
+  margin-right: 14px;
+  cursor:pointer
+}
+.cbpHeaderShrink .menuMobile {margin-top: 5px}
+
+/* Transitions and class for reduced height */
+.cbpHeader nav .dropDown > a {
+  -webkit-transition: all .3s ease;
+  -moz-transition:    all .3s ease;
+  transition:         all .3s ease
+}
+
+/*Europe requirement*/
+
+/* ----------------  home styles  ------------------------------------------ */
+
+#wrapper {padding-bottom:0; background-color: #000}
+#home #wrapper, #series #wrapper, #sports #wrapper, #movies #wrapper,
+#lifestyle #wrapper,  #factual #wrapper {
+  background-color: transparent
+}
+#home .row .complex img, .bWhite.Operator img {margin: 0 auto}
+#home .row a.mainBtn.act {
+  font-size: 1.25em;
+  padding: 6px;
+  min-width: 250px;
+  text-align: center
+}
+
+#fixPushdown {height:540px; width:100%; z-index:-1}
+
+.highlight .row div a, .lifestyle .row div a, .sports .row div a,
+.movies .row div a, .series .row div a, .factual .row div a,
+#lifestyle .row div a, #lifestyle .row div.sectionBtn, #sports .row div a,
+#sports .row div.sectionBtn, #movies .row div a, #movies .row div.sectionBtn,
+#series .row div a, #series .row div.sectionBtn, #factual .row div a,
+#factual .row div.sectionBtn {
+  opacity: .9;
+  display: block;
+  overflow: hidden
+}
+
+.highlight .row div a:hover, .lifestyle .row div a:hover,
+.sports .row div a:hover, .movies .row div a:hover, .series .row div a:hover,
+.factual .row div a:hover, #lifestyle .row div a:hover,
+#sports .row div a:hover, #movies .row div a:hover, #series .row div a:hover,
+#factual .row div a:hover {
+  opacity: 1
+}
+
+/* -----------  highlight boxes styles  ------------------------------------ */
+.highlight {margin-top:5px; margin-bottom:5px}
+.highlight .complex .label {padding:0; left:1em; top:10%; height: 100%}
+.HLboxes:after, .viewContinue article.videoWatch:after {
+  -webkit-box-shadow: inset 0 -60px 200px 0 rgba(0,0,0,.9);
+  -moz-box-shadow:    inset 0 -60px 200px 0 rgba(0,0,0,.9);
+  box-shadow:         inset 0 -60px 200px 0 rgba(0,0,0,.9);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  pointer-events: none!important;
+  width:100%;
+  height:100%;
+  opacity: .9
+}
+@media (min-device-pixel-ratio: 2) { 
+  .HLboxes:after {
+    background: radial-gradient(farthest-corner at 50% 10%, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.9));
+    box-shadow: none;
+  }
+}
+.HLboxes.soft:after {opacity:.2}
+
+.highlight .complex h5 {font-size: .9em; margin: 1.67em 0}
+
+.HLboxes.noShadow:after {box-shadow:none}
+.wBox {
+  background-color: #222;
+  box-shadow: inset 5px 5px 0 #000, inset -5px -5px 0 #000
+}
+.wBox .label h3 {margin:10px 0 7px}
+.noShadow {box-shadow:none!important}
+
+.overText {
+  background:rgba(0, 0, 0, .8);
+  border-radius:4px;
+  position:absolute;
+  z-index:2;
+  top:50%;
+  left:50%;
+  padding:10px 30px;
+  text-align:center;
+  width:300px
+}
+.overText.Big {margin-top:-24px; margin-left:-150px}
+.overText.Small {margin-top:-24px; margin-left:-150px}
+
+/*Labels style*/
+.label {position:absolute; z-index:2; bottom:0; left:0; padding:1.5em}
+.highlight .label {padding:0 1em 1.875em 1.125em; position:absolute}
+.label b {
+  display:inline-block;
+  padding:3px 5px;
+  text-transform:uppercase;
+  height: 20px;
+  vertical-align: top
+}
+.label h1 {text-indent:-3px; margin: 8px 0; line-height:100%}
+.Bbox .label h2 {text-indent:-2px}
+.label h2, .label h3 {text-indent:-1px; margin-top:6px}
+.label.new, .label.recipe {position:relative}
+.label.recipe {padding:.38em .938em .8em 1.125em}
+.HLboxes, .highlight .gutterVertical10 {display:block}
+
+.sectionBtn {text-align:center; display:inline-block; margin-right:20px}
+#lifestyle .row div.sectionBtn, #sports .row div.sectionBtn,
+#movies .row div.sectionBtn, #series .row div.sectionBtn,
+#factual .row div.sectionBtn {
+  display:inline-block
+}
+
+a.HLboxes {
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding: 56.25% 0 0 0;
+  overflow: hidden
+}
+a.HLboxes img.imgResponsive {
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto
+}
+
+.label .foxsports-premium {
+  background-color: transparent;
+  background-image: url(//cdn.foxplay.com/sites/foxplay-la/files/img/logo-channels/fox-sports-premiummas-cucarda.jpg);
+  background-position: left -14px;
+  background-repeat: no-repeat;
+  left: 0px;
+  padding: 10px 45px 9px;
+  position: relative;
+  display: inline-block;
+  height: 19px;
+  vertical-align: top;
+}
+
+/* ---------------  Continua Viendo ---------------------------------------- */
+/*ZonaContinuaViendo*/
+#sliderBox .videoWatch a:after {height: 69%; left: 10px; width: 92%}
+#sliderBox .videoWatch .watchedTime {margin-left: -37%; margin-top: -25px}
+#sliderBox #msjList {font-size: 16px; margin: 20px 0 90px}
+#sliderBox h3 > span {font-size: 1em; line-height: 16px}
+#mainContent #sliderBox .iconsX1 {
+    display: block;
+    fill: #9b9b9b;
+    margin: 60px auto 0;
+    height: 52px;
+    width: 52px; 
+}
+#mainContent #sliderBox .iconsX1:hover {
+    fill: #9b9b9b;
+}
+#mainContent #sliderBox .iconsX1:hover .svgFill {
+    visibility: hidden;
+    fill: #fff;
+}
+#mainContent #sliderBox .iconsX1:hover .svgStroke{
+    visibility: visible;
+}
+
+/*Estilos para tab*/
+#linkProfile {bottom: 20px; right: 10px}
+#menuSliderBox {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#menuSliderBox .menuSliderBox__list {
+  display: inline-block;
+  width: 680px;
+}
+#menuSliderBox li a {font-size: 15px; background-color: #fff}
+#menuSliderBox li a:hover, #menuSliderBox li.active a {
+  background-color: #ccc;
+  border-right: 1px solid #ccc;
+  color: #fff
+}
+#menuSliderBox li a:hover:after, #menuSliderBox li.active a:after {
+  border-top: 8px solid #ccc
+}
+#menuSliderBox li:first-child a {
+  border-left: 1px solid #ccc;
+  border-radius: 5px 0 0 5px
+}
+#menuSliderBox li:last-child a {border-radius: 0 5px 5px 0}
+#menuSliderBox li:only-child a, .bWhite .Operator {border-radius: 5px}
+#menuSliderBox li a {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  width: 170px;
+}
+#menuSliderBox li a:hover, #menuSliderBox li.active a {
+  color: #333;
+  background-color: #ccc
+}
+#menuSliderBox li a:hover:after, #menuSliderBox li.active a:after {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ccc;
+  bottom: -8px;
+  content: "";
+  height: 0;
+  left: 50%;
+  margin-left: -8px;
+  position: absolute;
+  width: 0
+}
+
+
+/* ------------  Footer styles  -------------------------------------------- */
+#Footer {font-size:.750em}
+#Footer a:hover {color: #fff}
+#Footer, #wrapper:after {height: 40px}
+#Footer ul.social {height:43px}
+#Footer nav li {display:inline-block}
+#Footer .social li {
+  border-left:1px solid #000;
+  float:left;
+  padding:0 5px;
+  min-height:43px
+}
+#Footer .social li:last-child {border-right:1px solid #000}
+#Footer .social .vectors {
+  float:left;
+  padding:10px 5px;
+  height: 100%;
+  margin: 3px 1px 0 0
+}
+#Footer .social .vectors svg {width:20px; height:20px}
+#Footer .social .vectors.vecTw svg, #Footer .social .vectors.vecPin svg {
+  width:29px;
+  height:29px
+}
+#Footer .social .vectors.vecTw, #Footer .social .vectors.vecPin {
+  position:relative;
+  top:5px;
+  padding:0
+}
+#Footer p {padding:8px 10px}
+#Footer p a {font-size: 1em}
+#Footer nav {padding:14px 10px}
+#Footer .social .fb, #Footer .social .tw, #Footer .social .gplus,
+#Footer .social .pint {
+  fill: #686868
+}
+#Footer .social a:hover .fb, #Footer .social a:hover .tw,
+#Footer .social a:hover .gplus, #Footer .social a:hover .pint {
+  fill: #999
+}
+
+#clearfooter {background-color:#eee; display: block;height: 70px}
+footer#Footer {clear: both; height: 43px; position: relative}
+
+/* ------------  Header sections styles  ----------------------------------- */
+#headerSection {padding-bottom:0; background: #000}
+#headerSection > .row {z-index:7; position:relative}
+.container.headerInfo {
+  padding-top:30px;
+  padding-bottom:40px;
+  width:40%;
+  z-index:2;
+  min-height:200px;
+  height: 100%!important
+}
+.container.headerInfo.specials {padding-top:24px}
+#headerSection .headerInfo.specials h1 {margin-bottom: 16px}
+#headerSection .headerInfo.bpM100 h1 {margin-top:0}
+#headerSection h1, #profile #headerSection h3 {
+  margin:15px 0 10px 0;
+  line-height:100%
+}
+
+#headerSection h1 {margin: 15px 0 12px; font-weight: 100; font-size: 24px}
+#headerSection .headerInfo.noAuth h2 {
+  font-size: 1.5em;
+  font-weight: 200;
+  margin: -4px 0 10px 0
+}
+
+#a-prev {width: 10px; height: 10px; fill: #999; margin-right: 5px}
+
+.event .headerInfo h1 {font-size: 1em!important}
+#headerSection .event .headerInfo.noAuth h2 {font-size: 2.250em!important}
+
+#headerHero header {padding-left:20px}
+#headerHero .sectionLogo span.vectors {
+  display:block;
+  fill: #fff;
+  opacity: .5;
+  height: 39px;
+  width: 104px
+}
+#headerHero .sectionLogo span.vectors.vecLogoFx svg {width:70px; height: 30px}
+#headerHero .sectionLogo span.vectors.vecLogoFox svg {width:70px; height: 30px}
+#headerHero .sectionLogo span.vectors.vecLogoFoxSports svg {
+  width: 86px;
+  height: 50px
+}
+#headerHero .sectionLogo span.vectors.vecLogoNatGeo svg {
+  width:95px;
+  height: 35px
+}
+#headerHero .sectionLogo span.vectors.vecLogoFoxLife svg {
+  width: 90px;
+  height: 30px
+}
+#headerHero .sectionLogo span.vectors.vecLogoMundoFox svg {width: 110px}
+.headerInfo .hashtag {
+  font-weight: 900!important;
+  font-size: 1.3em;
+  margin-bottom: -15px
+}
+.imdbRatingPlugin .rating {
+  font-weight: 900!important;
+  font-size: 1em;
+  margin-left: 0
+}
+#modal .imdbRatingPlugin {margin-left: 10px!important}
+span.imdbRatingPlugin a {display: inline-block!important}
+
+.viewContinue {z-index: 2; right:20px; bottom:20px}
+.viewContinue .heading {position: absolute; bottom: 8px; left: 10px;z-index: 2}
+.viewContinue h2 {
+  font-weight: 300!important;
+  font-size: 1.125em;
+  text-transform: uppercase
+}
+.viewContinue h4 {font-weight: 300!important; font-size: 1.125em}
+.viewContinue h3 {font-weight: 300!important; font-size: .875em}
+.viewContinue article.videoWatch {
+  max-width: 300px;
+  overflow:hidden;
+  position: relative
+}
+#headerHero .viewContinue svg.iconsX2 {
+  width: 40px;
+  height: 40px;
+  margin-right: 0;
+  margin-bottom: 0
+}
+
+#watchingBox .videoWatch {
+  overflow: hidden;
+  position: relative;
+  width: 25%;
+  padding-bottom: 13.6%;
+  float: left;
+  height: 0
+}
+
+#watchingBox .videoWatch img {
+  width: 97.7%;
+  height: 100%;
+  position: absolute;
+  left: 0
+}
+
+.videoWatch a:after {
+  -webkit-box-shadow: inset 0 -60px 100px 0 rgba(0,0,0,.75);
+  -moz-box-shadow:    inset 0 -60px 100px 0 rgba(0,0,0,.75);
+  box-shadow:         inset 0 -60px 100px 0 rgba(0,0,0,.75);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  pointer-events: none!important;
+  width:100%;
+  height:100%;
+  opacity: .8
+}
+#profile .slides .videoWatch a:after {max-width: 290px; margin-left: 10px}
+
+/* RATI JQUERY SIZE */
+#headerHero .sectionRating, .modalInformation .sectionRating {
+  display: inline-block
+}
+#headerSection .headerInfo .sectionRating img {margin:0}
+.noAuth .sectionRating img {margin-top: -5px!important}
+#headerHero .sectionRating img, #search .sectionRating img,
+.SeasonList .sectionRating div IMG,
+#headerSection .headerInfo.noAuth .sectionRating img {
+  width: 16px!important
+}
+.modalInformation .sectionRating img, #powerTip .sectionRating img {
+  width: 14px!important
+}
+#search .sectionRating img, #powerTip .sectionRating img,
+#powerTip .sectionRating {
+  margin: 0
+}
+#search .flexslider .sectionRating {margin-left:0}
+.sectionRating div {width: auto!important}
+.sectionRating div IMG, #search .flexslider .sectionRating div IMG {
+  width: 12px!important
+}
+.scrollingHeadSection .container .sectionRating div {padding-top: 6px}
+.flexslider .slides .sectionRating div IMG,
+#search .flexslider .slides .sectionRating div IMG {
+  display: inline-block;
+  margin-left:-2px
+}
+.flexslider .slides .sectionRating, .cards-notes-list .sectionRating,
+#search .flexslider .slides .sectionRating {
+  position: absolute;
+  bottom: 13px;
+  left: 10px
+}
+#lifestyle .scrollingHeadSection#headerItem header.headerInfo {
+  height: 85px;
+  min-height: 85px
+}
+#headerSection .sectionDetail strong {
+  background: #FFF;
+  border-radius: 3px;
+  padding: 2px 4px;
+  color: #000;
+  font-weight: 400
+}
+.sectionDetail * {margin:0 5px 0 5px}
+.sectionDetail span:nth-child(1) {margin-left:0}
+.sectionDetail b {margin-left:10px}
+
+.ActionIcons {bottom:2px;}
+.ActionIcons a:last-child {margin-right:0}
+#headerSection .headerInfo svg.iconsX2 {
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  fill:#fff
+}
+#headerSection .headerInfo.noAuth {min-height: 360px; z-index: 100}
+#headerSection .headerInfo.specials svg {margin-bottom: 3px}
+#headerSection .headerInfo svg.iconsX2:hover polygon,
+#headerSection .headerInfo svg.iconsX2:hover path.svgStrokeShare,
+#headerSection .headerInfo svg.iconsX2:hover rect,
+#headerSection .headerInfo svg.iconsX2:hover circle {
+  fill: #333
+}
+#headerSection .headerInfo svg.iconsX2:hover path.svgFill,
+#headerSection .headerInfo svg.iconsX2:hover path.svgStroke {
+  fill: #fff
+}
+
+.headerInfo.bpM100 .ActionIcons {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  right: 10px
+}
+.sectionLogo {right:20px; top:30px}
+
+#headerSection .overText.Small {
+  margin-top:60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 20px
+}
+
+.videoPlayM .vecIconPlay {
+  height:102px;
+  width:102px;
+  position:absolute;
+  z-index:2;
+  top:50%;
+  margin-top:-51px;
+  left:50%;
+  margin-left:-51px
+}
+
+/* ------------ Filters styles --------------------------------------------- */
+.modalBox input[type="text"] {
+  width: 70%;
+  height:40px;
+  border-radius:4px;
+  background-color:#ddd;
+  color:#333;
+  box-shadow:inset -1px 1px 1px #b2b2b2;
+  border:none;
+  padding:0 10px
+}
+
+#filters .search {float:right; line-height:40px}
+#filters .search input:focus {outline: none !important}
+#filters .search input, .profileConnect input[type="text"],
+#profile .headerInfo form input, #profile #parental form input,
+.devicesConfig div input, .pControl input[type="text"],
+.modalBox input[type="text"] {
+  height:40px;
+  border-radius:4px;
+  background-color:#ddd;
+  color:#333;
+  box-shadow: inset -1px 1px 1px #b2b2b2;
+  border:none;
+  padding:0 10px;
+  width: 100%
+}
+#profile #parental input[type="password"] {
+  height:40px;
+  border-radius:4px;
+  background:white;
+  color:#333;
+  box-shadow: inset -1px 1px 1px #b2b2b2;
+  border:none;
+  padding:0 10px;
+  width: 100%
+}
+
+#filters .search .vecSearchIcon {margin-top:12px}
+#filters .search.searchprogram input {
+  height: 40px;
+  border-radius: 4px;
+  background: white;
+  color: #333;
+  box-shadow: inset -1px 1px 1px #b2b2b2;
+  border: none;
+  padding: 0 10px;
+  font-size: 1em
+}
+#filters label.title {float:right; display:inline-block; line-height: 42px}
+.styledSelect select {
+  background: transparent;
+  width: 121%;
+  padding: 10px;
+  border: 0;
+  border-radius: 0;
+  height: 40px;
+  -webkit-appearance: none;
+  cursor: pointer
+}
+.styledSelect select:focus {outline: none !important}
+.styledSelect {
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  background: url(../images/down_arrow_select.jpg) no-repeat right #fff;
+  border:1px solid #f5f5f5;
+  border-radius: 5px;
+  box-shadow:0px 1px 1px #afaeae;
+  float:left;
+  margin-bottom:2px;
+  padding: 0 10px
+}
+.styledSelectSvg {
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  background: url('http://foxites.github.io/Developers/foxplayla/images/iconSvg_arrowDown.svg') no-repeat right #fff;
+  border:1px solid #f5f5f5;
+  border-radius: 5px;
+  box-shadow:0 1px 1px #afaeae;
+  float:left;
+  margin-bottom:2px
+}
+.conversor {
+  background-color:#eee;
+  border:none;
+  border-radius:5px;
+  height:40px;
+  width:100%;
+  padding:0 10px
+}
+.bl {border-left: #cbcbcb solid 1px}
+#filters .selectContainer {min-width: 200px}
+#filters .search input, .profileConnect input[type="text"],
+#profile .headerInfo form input, #profile #parental form input,
+.devicesConfig div input, .pControl input[type="text"],
+.modalBox input[type="text"] {
+  height:40px;
+  border-radius:4px;
+  background-color:#ddd;
+  color:#333;
+  box-shadow:inset -1px 1px 1px #b2b2b2;
+  border:none;
+  padding:0 10px
+}
+
+#filters .search input {padding-right: 10%}
+#series .bWhite.noSlide .mt20 .bpS100 .bpS16.pullRight.noPadding {
+  min-width: 210px
+} /* Style select en Series */
+
+/* ------------- Content list sections styles ------------------------------ */
+.contentList div * {display:inline-block; line-height:100%}
+.contentList li:hover, .contentList li.active {
+  box-shadow:inset 0 0 1px #939393;
+  border-radius:5px
+}
+.contentList li a > .pullRight {margin-top:3px}
+.contentList div svg, .contentList div a, .contentList div a span,
+.contentList div figure, .contentList div figure img {margin:0}
+.contentList div h4 {vertical-align:top; margin:5px 0 0 12px; width: 78%}
+.contentList li {padding-top:11px}
+
+.contentList div figure img, .contentList div figure {max-width:100%}
+.contentList figure img.imgResponsive {box-shadow: 0 1px 2px #afaeae}
+li.bpS33.bpM25.active figure img.imgResponsive {
+  box-shadow: none;
+  min-width: 100%
+}
+
+/* -------------- Poster thumbs styles ------------------------------------- */
+.posterThumbs li img {max-width:100%; height:auto; margin-bottom:20px}
+#userSliders .posterThumbs li a img {height: 210px}
+
+/* ------ Factual pages and modules style ---------------------------------- */
+.factual .label b, #factual .label b {text-shadow:1px 1px 1px #d09b00}
+
+/* -------------- Logged elements styles ----------------------------------- */
+.watchedTime {margin-top:7px; background-color:#ccc}
+.watchedTime, .watched {height:2px; padding:0!important}
+.watchedTime .watched {background-color:#333; float:left; display:block}
+.videoWatch .watchedTime {
+  background:rgba(255, 255, 255, .2);
+  position:absolute;
+  left: 50%;
+  margin-left: -37%;
+  top: 50%;
+  margin-top: -5px;
+  z-index:2
+}
+.videoWatch .watchedTime .watched {background-color:#fff}
+
+.vecIconPlay {bottom:10px; right:20px; z-index:2}
+.vecIconPlayVivo.vivo polygon {fill: white}
+.vecIconPlayVivo.vivo path.svgStroke {fill: white}
+.vivo b {color: white!important}
+.vecIconPlayVivo.vivo {
+  height: 102px;
+  width: 102px;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  margin-top: -51px;
+  left: 50%;
+  margin-left: -51px
+}
+#sports article.featuredRelated IMG, #search .featuredRelatedRecipe.vivo IMG {
+  height: 100%;
+  width: auto
+}
+
+#sports .sportsBlack.watch.relatedVideo .flex-direction-nav a {
+  background: url("http://cdn.foxplay.com/sites/foxplay-la/files/img/misc/flex-arrows-white.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background-color:#000;
+  top:43%!important
+}
+#sports .sportsBlack.watch.relatedVideo .flex-direction-nav .flex-next {
+  background-position: 11px center
+}
+#sports .sportsBlack.watch.relatedVideo .flex-direction-nav .flex-prev {
+  background-position: -11px center
+}
+
+.logged .videoWatch a:before {
+  content:"";
+  left: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  pointer-events: none!important;
+  width: 92%;
+  height: 100%;
+  background:rgba(0, 0, 0, .5)
+}
+#home.logged .videoWatch a:before {width: 100%;  left: 5px}
+
+.sectionBtn a> span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0
+}
+
+.sectionBtn a> span svg,
+#headerHero .sectionLogo span.vectors.vecLogoMundoFox {
+  margin-right: 10px
+}
+
+/* ------------ Listings styles -------------------------------------------- */
+#listings #mainContent > .containerFluid {border:none}
+#schedule {box-shadow:inset -1px 1px 0 #ccc; overflow:hidden}
+#scheduleContainer > .container,
+#scheduleContainer #hours > .container .bpS100,
+#scheduleContainer > .container,
+#scheduleContainer #stripHours > .container .bpS100 {
+  overflow:hidden
+}
+#daySelector h5, #daySelector a {
+  background: #FFF;
+  padding:10px 8px;
+  border-radius: 0;
+  height: 40px;
+  box-shadow:0 1px 1px #afaeae;
+  float:left;
+  border:1px solid #f5f5f5
+}
+#listings #daySelector h5 {padding: 0 25px;line-height:40px}
+#daySelector a.prev {border-radius:5px 0 0 5px; width:40px}
+#daySelector a.next {border-radius:0 5px 5px 0 ; width:40px}
+#daySelector .prev svg.arrows, #daySelector .next svg.arrows {height: 10px}
+#scheduleItems .ActionIcons {bottom:0}
+#mainContent #daySelector h5 {margin-bottom:0}
+#scheduleContainer .row:nth-child(1) {height:50px}
+#scheduleContainer #hours *, #scheduleContainer #stripHours * {
+  line-height: 50px
+}
+#scheduleContainer #hours, #scheduleContainer #stripHours {
+  box-shadow:0 1px 1px #afaeae;
+  background-color:#fff;
+  position:relative;
+  -webkit-transition: padding .8s;
+  -moz-transition:    padding .8s;
+  transition:         padding .8s
+}
+#hours.scrolling {left:-10px; width:101%!important}
+#scheduleContainer #hours .controls, #scheduleContainer #stripHours .controls {
+ position:absolute;
+ height:50px;
+ top:0;
+ z-index:1;
+ background-color:#fff
+}
+#scheduleContainer #hours .prev, #scheduleContainer #stripHours .prev {
+  width:160px;
+  left:0
+}
+#scheduleContainer #hours.scrolling .prev,
+#scheduleContainer #stripHours.scrolling .prev {
+  width:236px
+}
+#scheduleContainer #hours .prev svg.arrows,
+#scheduleContainer #stripHours .prev svg.arrows {
+  width: 10px;
+  height: 15px;
+  margin-left: 30px
+}
+#scheduleContainer #hours .next, #scheduleContainer #stripHours .next {
+  width:80px;
+  text-align:right;
+  right:0
+}
+#scheduleContainer #hours .next svg.arrows,
+#scheduleContainer #stripHours .next svg.arrows {
+  width: 10px;
+  height: 15px;
+  margin-right: 20px
+}
+#scheduleContainer #hours .hoursStripe,
+#scheduleContainer #stripHours .hoursStripe {
+  overflow:hidden;
+  margin-left:151px
+}
+#scheduleContainer #hours.navbarFixedTop .hoursStripe,
+#scheduleContainer #stripHours.navbarFixedTop .hoursStripe {
+  margin-left:234px
+}
+#scheduleContainer #hours span, #scheduleContainer #stripHours span {
+  width:240px;
+  box-shadow:inset 1px 0 0 #cfcdcd;
+  height:50px;
+  float: left;
+  padding-left:20px
+}
+#scheduleContainer #hours.scrolling > .container,
+#scheduleContainer #stripHours.scrolling > .container {
+  max-width: 1437px
+}
+#scheduleContainer .sticky-wrapper {display: block; height: 50px}
+#hours.navbarFixedTop .prev, #stripHours.navbarFixedTop .prev {
+  left: 20px!important;
+  width: 224px!important
+}
+#hours.navbarFixedTop .next, #stripHours.navbarFixedTop .next {
+  right: -10px!important
+}
+
+/*bar channels*/
+.channelsBar {background-color:#333; position:relative; z-index:100}
+.channelsBar li {height:160px; border-bottom:1px solid #444; width:160px}
+#mainContent .channelsBar li a {color:#fff}
+.channelsBar .vectors.vecChannel {
+  display: table-cell;
+  height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  width: inherit
+}
+
+/*schedule items*/
+#scheduleItems * {float:left}
+#scheduleContainer #scheduleItems .row {
+  border-bottom:1px solid #ccc;
+  height:160px;
+  margin-left:0;
+  position: relative
+}
+
+#scheduleItems img {margin-right:20px}
+#scheduleItems .row > div {height:160px; padding:20px; overflow: hidden}
+#scheduleItems .row div.relative {height:120px}
+#scheduleItems .row .oneHour div.relative {width:100%}
+#scheduleItems .ActionIcons {z-index:1}
+#scheduleItems .ActionIcons span {margin-right:10px}
+#scheduleItems .ActionIcons span svg.iconsX2 {width:30px; height:30px}
+#scheduleItems div.oneHour .relative {width:auto; max-width: 75%}
+#scheduleItems div.oneHour figure {max-width: 25%}
+
+#listings .row h2 {width: 100%}
+#listings .row .halfHour h2 {width:100%; overflow:hidden}
+#listings #scheduleItems, #listings .hoursStripe, .hoursStripe {width:13000px}
+#listings .halfHour > figure {display:none}
+#listings .row div > figure img {width: 80px}
+#listings .actionPrev.prev.arrows.relative.disable > svg,
+#listings .actionNext.next.arrows.relative.disable > svg {
+  fill:#CCC
+}
+#listings .vectors.vecChannel > img {max-width:150px}
+
+/* ---------- Live Channel styles ------------------------------------------ */
+/*helpers*/
+.txtGrey {color: #777 !important}
+.liveChannels a.pullRight:hover {color: white !important}
+.bodyBlack {background: black}
+
+#headerSection.container-liveChannels option {color: #000; background: white}
+.liveChannels #scheduleItems {width:13000px}
+.liveChannels .ads h5 {color: white !important}
+.liveChannels #scheduleItems .row .relative h2,
+.liveChannels #scheduleItems .row .relative h4 {
+  color: #ccc
+}
+.liveChannels #scheduleContainer #scheduleItems .row {margin-left: 170px}
+.liveChannels #scheduleItems .row,
+.liveChannels #scheduleItems .row > div:last-child::after {
+  border: none !important;
+  background: none repeat scroll 0 0 #111
+}
+.liveChannels #scheduleItems .row h2 {width: 100%}
+.liveChannels .lineDivider{background-color: #333}
+
+.liveChannels #schedule, .liveChannels #scheduleContainer #stripHours {
+  background: none;
+  border: 1px solid #333;
+  box-shadow: none
+}
+.liveChannels #schedule {border-top: none}
+.liveChannels #scheduleContainer #stripHours .controls {
+  width: 40px;
+  height: 48px;
+  background: #000
+}
+.liveChannels #scheduleContainer #stripHours .next,
+.liveChannels #scheduleContainer #stripHours .prev,
+.liveChannels #scheduleItems .row .relative .iconsX1,
+.liveChannels #scheduleItems .row .relative .iconsX2 {
+  fill: #ccc
+}
+.liveChannels #scheduleContainer #stripHours span {
+  box-shadow: 1px 0 0 #333 inset;
+  color: #ccc;
+  height: 49px
+}
+
+.liveChannels #stripHours svg.arrows {color: #777}
+.liveChannels #scheduleItems .series {box-shadow: 4px 0 0 #fad000 inset}
+
+.liveChannels aside .pullRight .vectors .arrows,
+section .pullRight .vectors .arrows {
+  fill: #777
+}
+.liveChannels aside .pullRight:hover .vectors .arrows,
+section .pullRight:hover .vectors .arrows {
+  fill: #fff
+}
+
+/*Select custom*/
+.container-liveChannels label, .container-liveChannels select#selectChannels {
+  color: #777 !important
+}
+
+#selectChannels { width: 100%; -webkit-appearance: none; -moz-appearance: none}
+
+.container-liveChannels .styledSelect {
+  width: 194px;
+  height: 40px;
+  overflow: hidden;
+  background: url('http://cdn-flac.ficfiles.com/sites/foxplay/files/img/live-channels/natgeo-wild/down_arrow_select_white.png?ver=683fbfad-2c74-4aab-83da-93e170a4bdc4') no-repeat right #000;
+  border: 1px solid #333 !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  float: left;
+  margin-bottom: 2px;
+  padding: 0 !important
+}
+.container-liveChannels .styledSelect select {padding:0 30px 0 10px !important}
+.container-liveChannels .sectionVideo {width: auto; margin: 0 auto 0}
+.container-liveChannels .babyTv_headerInfo {margin-top: 42px !important}
+.liveChannel-logo img {width: 168px;display: block;float: left;margin: 10px 0}
+
+/*Player custom*/
+.container-liveChannels .sectionVideo .player-liveChannels {
+  width: 100%;
+  position: relative;
+  border: 1px solid #333
+}
+.container-liveChannels .sectionVideo .player-liveChannels .overlay-player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0,0,0,.6);
+  z-index:999
+}
+.container-liveChannels .sectionVideo .player-liveChannels figure {
+  max-height: inherit !important
+}
+.container-liveChannels .sectionVideo .player-liveChannels .overlay-player .overlay-player-content {
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 42%;
+  text-align: center;
+  font-weight: lighter !important
+}
+.container-liveChannels .sectionVideo .player-liveChannels .overlay-player .overlay-player-content h1 {
+  font-size: 3em;
+  margin-top: -25% !important;
+  margin-bottom: 20px !important;
+  line-height: 1.3em !important;
+  font-weight: lighter !important
+}
+.container-liveChannels .sectionVideo .player-liveChannels .overlay-player .overlay-player-content p {
+  margin: 10px 0;
+  font-size: 1.4em;
+  font-weight: lighter !important
+}
+.container-liveChannels .sectionVideo .player-liveChannels .overlay-player .overlay-player-content .btn-start {
+  display: block;
+  padding: 12px 15px;
+  color: #333 !important;
+  background: white;
+  border-radius: 4px;
+  width: 55%;
+  margin: 20px auto 30px;
+  font-size: 1.3em;
+  font-weight: lighter !important
+}
+.container-liveChannels .sectionVideo .player-liveChannels .overlay-player .overlay-player-content .icon-question {
+  display: block;
+  padding: 8px;
+  color: #333 !important;
+  background: white;
+  border-radius: 50%;
+  margin: -2.7em 2.5em 0 0;
+  width: 30px;
+  height: 30px;
+  float: right;
+  line-height: 16px;
+  font-weight: 500 !important;
+  cursor: pointer
+}
+.container-liveChannels .sectionVideo .player-liveChannels .overlay-player .vecIconPlay .iconsX2 {
+  width: 102px;
+  height: 102px;
+  fill: #fff
+}
+.container-liveChannels .sectionVideo .player-liveChannels .overlay-player .vecIconPlay .iconsX2:hover {
+  fill: #333
+}
+
+/*ads*/
+#ad_250x300 {float: right}
+aside .ads {margin-right: 320px !important}
+
+/* ---------- Sport Schedule styles ---------------------------------------- */
+#listings #mainContent > .containerFluid {border:none}
+#schedule {box-shadow:inset -1px 1px 0 #ccc; overflow:hidden}
+#scheduleContainer > .container,
+#scheduleContainer #hours > .container .bpS100,
+#scheduleContainer > .container,
+#scheduleContainer #stripHours > .container .bpS100 {
+  overflow:hidden
+}
+
+.activeSports {background-color: #222}
+
+/*bar channels*/
+.sportsBar {background-color:#333; position:relative; z-index:100}
+.sportsBar li {
+  height:195px;
+  border-bottom:1px solid #444;
+  width:160px;
+  padding: 10px
+}
+.sportsBar li span {
+  display: block;
+  color: white !important;
+  font-size: 1.775em;
+  font-weight: lighter !important;
+  float: right;
+  clear: both
+}
+#mainContent .sportsBar li a {color:#fff}
+
+/*sports items*/
+#sportsItems h4, #sportsItems .ActionIcons {float:none}
+#scheduleContainer #sportsItems .row {height:195px; margin-left:0}
+#sportsItems figure {position: relative}
+#sportsItems .row > div {
+  height:195px;
+  padding: 0 0 0 2px;
+  width: 14.95%;
+  float: left
+}
+#sportsItems .row > li {
+  height:195px;
+  padding: 0 0 0 2px;
+  width: 14.95%;
+  float: left;
+  margin: 0 !important
+}
+#sportsItems .row div.relative {height:120px}
+#sportsItems .ActionIcons {
+  z-index:1;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px
+}
+#schedule #sportsItems #flexSports .ActionIcons {bottom: 80px}
+#sportsItems .ActionIcons span {width:30px; height:30px; margin-right:10px}
+#sportsItems #flexSports li .ActionIcons svg {fill: white}
+.sportInfo {width: 100%; background: white; padding:7px 10px; min-height:75px}
+.sportInfo span {display: block}
+
+#flexSports {padding: 0 !important}
+#flexSports .flex-direction-nav .flex-prev {left: 160px !important}
+#flexSports .flex-direction-nav .flex-next {right: 0 !important}
+#sports .news_horizontal_list li.bpS25.bpM20 article {height: 175px}
+h1#actualDate, #scheduleContainer li.activeSports {text-transform: capitalize}
+#scheduleContainer h4 {text-transform: uppercase}
+.sportsBar .dayName {font-size: 1.5em}
+.sportsBar .dayNumber {font-size: 2em}
+.sportsBar li.bpS25.bpM18 {float: left;display: block}
+.slides.figure-slide li span.vectors.vecIconReminder {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px
+}
+#sports .relatedVideo.sportsBlack.watch .flex-viewport article a figure img {
+  background: url("http://cdn-flac.ficfiles.com/sites/common/objects/img/fp-genericagris-1920x1082.png") no-repeat scroll center center transparent;
+  -webkit-background-size:  cover;
+  -moz-background-size:     cover;
+  -o-background-size:       cover;
+  background-size:          cover;
+  min-height: 123px;
+  text-indent: -9999px
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #sports .relatedVideo.sportsBlack.watch .flex-viewport {height:182px}
+  #sports .relatedVideo.sportsBlack.watch .flex-viewport article a figure img {
+    height:123px
+  }
+}
+
+/* --------- Slider mask styles -------------------------------------------- */
+.sliderMask {padding-right:10px}
+.sliderMask ul li {width:266px!important}
+.sliderMask h4 {margin-top:10px}
+.sliderMask:before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:10px;
+  height:100%;
+  background-color:#eee;
+  z-index:2
+}
+.sliderMask .sliderAction {
+  height:50px;
+  background-color:#eee;
+  position:absolute;
+  top:38%;
+  width:20px;
+  margin-top:-25px
+}
+.actionNext {border-radius:3px 0 0 3px; right:10px}
+.actionPrev {border-radius:0 3px 3px 0; left:10px}
+
+.sliderMask .vecIconPlay {top:95px; bottom:auto; width:32px; height:32px}
+.sliderMask.poster ul li {width:178px}
+.sliderMask.poster .sliderAction {top:50%}
+.sliderMask.poster li img {margin-bottom:0}
+
+article.featuredRelated, article.featuredRelatedRecipe.vivo {
+  float: left;
+  box-shadow:0 1px 2px #afaeae;
+  position: relative;
+  overflow: hidden;
+  margin: 5px 0;
+  width: 100%;
+  height: 260px
+}
+
+article.featuredRelated HEADER, article.featuredRelatedRecipe.vivo HEADER {
+  padding: 12px;
+  width: 100%;
+  background: none;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  z-index: 3
+}
+article.featuredRelated HEADER H1, article.featuredRelated HEADER H2,
+article.featuredRelatedRecipe.vivo HEADER H1,
+article.featuredRelatedRecipe.vivo HEADER H2 {
+  color: #fff!important;
+  font-weight: 300!important;
+  line-height: 1
+}
+article.featuredRelated HEADER H1,
+article.featuredRelatedRecipe.vivo HEADER H1 {
+  font-size: 1.3em;
+  margin-bottom: 3px
+}
+article.featuredRelated HEADER H2,
+article.featuredRelatedRecipe.vivo HEADER H2 {
+  font-size: 1em
+}
+article.featuredRelated IMG, article.featuredRelatedRecipe.vivo IMG {
+  width: 100%
+}
+article.featuredRelated .sectionRating,
+article.featuredRelatedRecipe.vivo .sectionRating {
+  margin-top: 2px
+}
+article.featuredRelated .sectionRating IMG,
+article.featuredRelatedRecipe.vivo IMG {
+  width: auto
+}
+
+article.featuredRelated:after {
+  -webkit-box-shadow: inset 0 -60px 100px 0 rgba(0,0,0,.9);
+  -moz-box-shadow:    inset 0 -60px 100px 0 rgba(0,0,0,.9);
+  box-shadow:         inset 0 -60px 100px 0 rgba(0,0,0,.9);
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  pointer-events: none!important;
+  width: 100%;
+  height: 100%;
+  opacity: .9
+}
+
+#lifestyle .bpS41.bpM41.featured article.featuredRelated IMG {height: auto}
+
+/* ----------- More About styles ------------------------------------------- */
+#moreAbout #mainContent .container {text-align:center}
+h1 {line-height:100%}
+#moreAbout h3 {width: 80%; display: block; margin: auto}
+#moreAbout #mainContent .container > .bpS83 {display:inline-block; float:none}
+#moreAbout #mainContent .container {
+  border-bottom:1px solid #ccc;
+  padding-bottom:40px;
+  margin-bottom:50px
+}
+
+#moreAbout  #mainContent > .containerFluid,
+#moreAbout #mainContent .containerFluid:last-child .container {
+  border:none
+}
+#moreAbout #mainContent .containerFluid:last-child .container {
+  padding-bottom:0
+}
+#moreAbout .logosList img {margin: 0 auto}
+#moreAbout .iconList div {
+  width:15%;
+  margin:20px 15px 0 15px;
+  display:inline-block;
+  vertical-align:top
+}
+
+.vecIconProfile {width:40px; height:40px; display:inline-block}
+
+#moreAbout .providerGrid .idp_logo {max-width: 130px; padding: 0 0 20px 20px}
+#moreAbout .providerGrid .idp_logo:first-child {padding-left: 0}
+#moreAbout .logosChannel img, #moreAbout .logosChannel a img {max-height: 40px}
+#moreAbout .logosChannel img:last-child,
+#moreAbout .logosChannel a img:last-child {max-height: 30px}
+.providerGrid ul li a img {
+  width: auto;
+  margin: 12px auto;
+  max-height: 50px;
+  display: block
+}
+
+/* ------------- Authentication styles ------------------------------------- */
+#auth {background: #eee}
+
+.authContainer {width: 724px;margin: auto}
+.authContainer h2 {line-height: 26px}
+.authContainer img#provider {width: 100%}
+.authContainer a.dBlock {text-transform: uppercase}
+
+.textAuth {font-size: 1.25em}
+.textAuthSmall {
+  font-size: .9em;
+  margin: 4px 0 0 0;
+}
+
+.currentCountry,
+.event a.overText.Small,
+#auth span.idp_name,
+#modal.wAuth span.idp_name {
+  font-size: 1em
+}
+.event a.overText.Small {font-size: 1.2em}
+
+/*page*/
+
+.providerGrid ul li {
+  background: white;
+  box-shadow: 0 1px 1px #afaeae;
+  float: left;
+  height: 90px;
+  margin: 0 10px 10px 0;
+  padding: 10px;
+  width: 160px;
+}
+.authBox > div {
+  background-color: #fff;
+  box-shadow: 0 1px 1px #afaeae;
+  float: left;
+  padding: 8px;
+  width: 48%;
+}
+.authBox > div *{
+  display: inline-block;
+  float:none;
+}
+#auth h4 {
+  border:1px solid #ccc;
+  border-radius:5px;
+  padding:10px 15px;
+}
+#auth #mainContent .paddingLarge.tCenter > div {
+  display:inline-block;
+  float:none;
+  text-align:left
+}
+#auth .profileConnect ol, .overlayPlayer ol{list-style: disc inside}
+#auth .Operator p {font-size: .95em; font-weight: 300}
+
+.profileConnect .social {padding-right:30px}
+.profileConnect .emailContainer {
+  border-left: 1px solid #ccc;
+  padding-left: 30px;
+}
+.profileConnect .social a {
+  border-radius: 5px;
+  display:block;
+  font-size: .8em;  
+  margin-bottom: 15px;
+  padding: 6px; 
+}
+.profileConnect .social a.fb {background-color:#1274ba}
+.profileConnect .social a.tw {background-color:#22afed}
+.profileConnect .email {width:100%}
+.profileConnect aside div:first-child {padding-right:30px}
+.profileConnect aside div:last-child {padding-left:30px}
+.profileConnect aside a {display:inline-block!important}
+
+
+/* Auth Frame */
+body#auth_frame {overflow: hidden}
+header.ribbon {
+  background: #000;
+  height: 132px;
+  padding: 10px 0 0;
+  width: 100%;
+}
+header.ribbon .logo {
+  background: #222;
+  float: left;
+  height: 120px;
+  text-align: center;
+}
+header.ribbon .logo a {margin: 40px 0 0; display: block}
+header.ribbon .text {
+  color: white;
+  float: left;
+  font-weight: lighter;
+  margin: 0 0 0 30px;
+  padding: 16px;
+  width: 50%;
+}
+
+section iframe {
+  clear: both;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Watch - Suscription Premium */
+.suscriptors, .suscriptors strong,
+.slides .suscriptors, .tempsuscriptors.tempsuscriptors strong {
+  font-size: 13px
+}
+.slides .suscriptors, .slides .suscriptors strong,
+.tempsuscriptors, .tempsuscriptors strong {
+  color: #fff!important
+}
+.slides .suscriptors, .tempsuscriptors {padding: 5px}
+.suscriptors {padding: 1px 5px; margin:0}
+.slides .suscriptors {background-color: #000; right: 0}
+.headerInfo .suscriptors {background-color: #fff}
+.headerInfo .suscriptors, .headerInfo .suscriptors strong {
+  color: #3e3e3e!important
+}
+.tempsuscriptors {background-color: #3e3e3e;margin:0!important}
+.suscriptors strong, .tempsuscriptors strong {font-weight: bold;margin: 0}
+
+/* ----------- Hover box styles -------------------------------------------- */
+#powerTip {
+  width:245px;
+  cursor: default;
+  background-color:#fff;
+  border-radius: 5px;
+  display: none;
+  padding: 20px;
+  position: absolute;
+  white-space: normal;
+  z-index: 2147483647;
+  box-shadow:1px 2px 10px -3px rgba(0,0,0,.64)
+}
+#powerTip strong, #search .sectionDetail strong,
+#modal .modalInformation .sectionDetail strong {
+  background: #333;
+  border-radius: 3px;
+  padding: 2px 4px;
+  color: #fff;
+  font-weight: 400;
+  margin-left:0;
+  margin-right:0
+}
+#powerTip .video a {position:relative; display:block}
+#powerTip h2 {margin-top: -5px; line-height: 1em}
+#powerTip .sectionBtn {margin-right: 5px}
+#powerTip .vecIconPlay {
+  height:30px;
+  width:30px;
+  top:70px;
+  left:auto;
+  bottom:auto;
+  right:10px
+}
+.seriesTooltip .ActionIcons .iconsX2 {height:30px; width:30px}
+#powerTip .ActionIcons .iconsX2 {
+  height:33px;
+  width:33px;
+  margin: 0 auto 5px auto
+}
+#powerTip .sectionLogo {margin-bottom: 8px}
+#powerTip .sectionLogo .vectors path, #powerTip .sectionLogo .vectors polygon,
+#powerTip .sectionLogo .vectors rect {
+  fill: #333!important
+}
+#powerTip .sectionLogo .vectors svg {
+  height: 16px!important;
+  width: auto
+}
+#powerTip .sectionLogo .vectors.vecLogoFoxLife svg,
+#powerTip .sectionLogo .vectors.vecLogoNatGeo svg,
+#powerTip .sectionLogo .vectors.vecLogoFoxSports svg {
+  height: 22px!important
+}
+
+/* -------------- Search page styles --------------------------------------- */
+#menuFilter li, #menuFilter-2 li, #menuFilter-3 li {float:left}
+#menuFilter li:first-child a, #menuFilter-2 li:first-child a,
+#menuFilter-3 li:first-child a {
+  border-left:1px solid #ccc;
+  border-radius:5px 0 0 5px
+}
+#menuFilter li:last-child a, #menuFilter-2 li:last-child a,
+#menuFilter-3 li:last-child a {
+  border-radius:0 5px 5px 0
+}
+#profile li:only-child a, .bWhite .Operator {border-radius: 5px}
+#menuFilter li a, #menuFilter-2 li a, #menuFilter-3 li a {
+  border-bottom:1px solid #ccc;
+  border-right:1px solid #ccc;
+  border-top:1px solid #ccc;
+  padding:12px 20px;
+  position:relative
+}
+#menuFilter li a span, #menuFilter-2 li a span, #menuFilter-3 li a span,
+#profileMenu a span {
+  background-color:#ddd;
+  border-radius:15px;
+  display:inline-block;
+  margin-left:10px;
+  max-width:40px;
+  min-width:24px;
+  padding:5px;
+  text-align:center
+}
+#menuFilter li a:hover, #menuFilter li.active a, #menuFilter-2 li a:hover,
+#menuFilter-2 li.active a, #menuFilter-3 li a:hover, #menuFilter-3 li.active a {
+  background-color:#ccc
+}
+#menuFilter li a:hover:after, #menuFilter li.active a:after,
+#menuFilter-2 li a:hover:after, #menuFilter-2 li.active a:after,
+#menuFilter-3 li a:hover:after, #menuFilter-3 li.active a:after {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ccc;
+  bottom:-8px;
+  content:"";
+  height: 0;
+  left:50%;
+  margin-left:-8px;
+  position:absolute;
+  width: 0
+}
+#search p {margin-bottom:10px}
+
+/* -------------- Profile styles ------------------------------------------- */
+#profile #headerHero {height:220px; overflow:hidden}
+#profile #headerHero.edit {height:360px}
+#profile #headerSection .imgCircle {width:140px; height:140px; margin:0}
+#profile .container.headerInfo {width:99%; height:auto; padding-top:40px}
+.profileInfo a {
+  padding-right:10px;
+  display:inline-block;
+  border-right: 1px solid rgba(255, 255, 255, .3)
+}
+.profileInfo a:last-child {border:none; padding-left:10px}
+#profile .RightElements {right:5px; top:90px}
+.headerInfo .tCenter.bpM18 {height:450px}
+.headerInfo .tCenter.bpM18 a {width:100%}
+.headerInfo form div {display:inline-block; margin:0 20px 20px 0; width:47%}
+.headerInfo form div:nth-child(2) {margin-right:0}
+.headerInfo form div:nth-child(3) {width:65%}
+.headerInfo form label {display:block; margin-bottom:5px}
+#profile #headerSection .headerInfo form input,
+#profile #parental form input[type="text"] {
+  background-color:#fff;
+  width:100%
+}
+#profile .SocialConnect hr {
+  margin:20px 0 0 0;
+  border-top:1px solid rgba(255,255,255, .3)
+}
+.RightElements .auxBtn {
+  background:none;
+  border:1px solid #fff;
+  margin-left:10px
+}
+#profileMenu li a {padding: 10px 10px 10px 20px; width:100%; display:block}
+#profileMenu li a:hover {background: #FFF; border-radius: 4px}
+#profileMenu li.active a {
+  background-color:#fff;
+  border:none;
+  border-radius:4px
+}
+#profile #mainContent h1, #profile #alerts section ol li.bWhite {
+  border-bottom:1px solid #ccc
+}
+#profile #alerts section ol li.bWhite a {padding: 8px 10px; display: block}
+
+#profile #mainContent {min-height: 500px; padding-top: 30px}
+#profile #mainContent h1.pullLeft {border:none; margin-top:5px}
+#profileMenu a span {float:right; font-size:12px!important; margin-top:0}
+#profile #watchlist .editBtn, #profile #history .editBtn,
+#profile #alerts .editBtn {
+  margin-bottom:-1px
+}
+#profile .SocialConnect {margin-top:20px}
+
+.infiteScroll {
+  text-align:center;
+  display:block;
+  padding-bottom:10px;
+  margin-top:0;
+  clear: both
+}
+#history .infiteScroll {margin-top: 25px}
+#profile hr {float:left; width:100%}
+
+#profile .profileBadge {cursor: pointer}
+#profile .profileBadge img.imgResponsive {width: auto}
+
+#profile .thumbs ul li {width:310px!important}
+#profile .sliderMask .vecIconPlay {top:123px}
+#profile.logged .videoWatch a:before {width:94%; height:164px}
+#profile .sliderMask.thumbs .sliderAction {top:50%}
+#profile .sliderMask.thumbs .videoWatch .watchedTime {top:52%}
+#profile .sliderMask.flexslider .flex-direction-nav a {top:49%}
+
+#profile .sliderMask.thumbs .heading{
+  position:absolute;
+  bottom:7px;
+  left: 20px;
+  z-index:2
+}
+#profile section.noPadding {overflow:hidden}
+
+#profile #menuFilter li a, #profile #menuFilter-2 li a,
+#profile-3 #menuFilter li a {
+  background-color:#fff
+}
+#profile #menuFilter li a:hover, #profile #menuFilter li.active a,
+#profile #menuFilter-2 li a:hover, #profile #menuFilter-2 li.active a,
+#profile #menuFilter-3 li a:hover, #profile #menuFilter-3 li.active a {
+  background-color:#333;
+  border-right:1px solid #333;
+  color:#fff
+}
+#profile #menuFilter li a:hover:after, #profile #menuFilter li.active a:after,
+#profile #menuFilter-2 li a:hover:after,
+#profile #menuFilter-2 li.active a:after,
+#profile #menuFilter-3 li a:hover:after,
+#profile #menuFilter-3 li.active a:after {
+  border-top:8px solid #333;
+}
+#profile #menuFilter li a span, #profile #menuFilter-2 li a span,
+#profile #menuFilter-3 li a span {
+  font-size:12px;
+  margin-top:-2px;
+  vertical-align:top
+}
+#profile #profileMenu {padding-right: 25px}
+#profile .dataBox {border-left: 1px solid #ccc; padding-left: 30px}
+#profile .logoutBtn {
+  background-color: #ff0000;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  padding: 9px 20px;
+  border-radius: 4px;
+  border: none
+}
+#profile .logoutBtn:hover {background-color: rgb(203, 61, 61)}
+#profile figure {max-height: 163px; overflow: hidden}
+#static #wrapper, #profile #wrapper {background-color: #000}
+
+/*Ordered list*/
+.orderList {clear:both}
+.orderList li {padding:20px 0; border-bottom:1px solid #ccc}
+.orderList li:last-child {margin-bottom:10px}
+.orderList li span {float:right}
+.orderList li > span {width:170px; text-align:right}
+.orderList li > span.vectors {width:auto; margin-left:10px; margin-top:-2px}
+.orderList li span.vecIconPlay {
+  float: left;
+  vertical-align: top;
+  margin-top: -5px;
+  margin-right: 10px
+}
+
+#profile .orderList .watchedTime {
+  float: none;
+  display: inline-block;
+  vertical-align: middle
+}
+
+/*My Devices section*/
+.devicesConfig p {
+  width:35%;
+  position:absolute;
+  right:30px;
+  top:20px;
+  text-align:right
+}
+.devicesConfig div > div {position:absolute; bottom:20px; left:20px; width:80%}
+.devicesConfig div a {margin-right:10px; float:left}
+.devicesConfig div a span.vecIconInfo {
+  position:absolute;
+  right:30px;
+  bottom:20px
+}
+.devicesConfig div input {width:175px; background-color:#eee}
+.devicesConfig div >img {border-radius:5px}
+
+.myDevices ol li {
+  background-color:#fff;
+  padding:15px 10px;
+  border-radius:4px;
+  margin-bottom:20px;
+  border-bottom:none;
+  box-shadow:inset 0 1px 0 #ccc
+}
+.myDevices ol li .iconsX1 {width:20px; height:20px}
+#verify-subscription a {color: #ff6c00; font-size: 1.125em; font-weight: 300}
+
+/*welcome profile page*/
+#welcomeProfile .row div > div {
+  background-color:#fff;
+  border-radius:5px;
+  box-shadow:0 1px 0 #ccc;
+  height:120px!important;
+  margin-bottom:20px
+}
+#welcomeProfile .row span {width:70%; top:70px}
+#welcomeProfile .row span.vectors {
+  top:15px;
+  left: 50%;
+  margin-left: -20px;
+  width: auto
+}
+#welcomeProfile .iconsX1, #welcomeProfile svg.iconsX2 {
+  width:50px;
+  height:50px;
+  cursor:pointer
+}
+#mainContent #welcomeProfile .iconsX1:hover,
+#mainContent #welcomeProfile .iconsX1:hover .svgStroke {
+  visibility: visible;
+  fill:#333
+}
+#mainContent #welcomeProfile .iconsX1:hover .svgFill {
+  visibility: visible;
+  fill:#fff
+}
+#welcomeProfile a {display: block; height: 100%; width: 100%}
+
+/*Edit dialogs*/
+#profile .bpM80 .close {right:20px; top:10px; z-index:2}
+.profileConnectDisable {
+  position: absolute;
+  height: 200px;
+  width: 95%;
+  background: #FFF;
+  z-index: 1;
+  opacity: .5
+}
+
+/*Parental control*/
+.pControl label {font-weight:300}
+.pin {width:160px}
+
+/*toggle buttons*/
+.toggle label svg {
+  fill:#c1c1c1;
+  z-index:3;
+  right:6px;
+  position: absolute;
+  top: 8px
+}
+.toggle input[type=checkbox]:checked ~ label svg {
+  right:46px!important;
+  position:relative;
+  margin-left:3px
+}
+.toggle {position: relative; display:inline-block; width:90px; float:left}
+.toggle label {
+  color: #444;
+  float: left;
+  line-height: 40px;
+  text-indent:-40px;
+  cursor: pointer
+}
+.toggle label:after {
+  content: "Off";
+  position: absolute;
+  color: #fff;
+  z-index:1;
+  top: 1px;
+  left: 49px
+}
+.toggle label:before {
+  content: "On";
+  position: absolute;
+  color: #fff;
+  z-index:1;
+  top: 1px;
+  left: 90px
+}
+.toggle input[type=checkbox]:checked ~ label {text-indent:-40px}
+.toggle .toggleButton {
+  margin: 0 10px 0 0;
+  float: left;
+  width: 80px;
+  height: 40px;
+  background-color:#c1c1c1;
+  border-radius:          4px;
+  -webkit-border-radius:  4px;
+  -moz-border-radius:     4px
+}
+.toggle .toggleButton .toggleTab {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius:          4px;
+  -webkit-border-radius:  4px;
+  -moz-border-radius:     4px;
+  margin-left: 40px;
+  display: block
+}
+.toggle input[type=checkbox] {display: none}
+.toggle input[type=checkbox]:checked ~ label .toggleButton .toggleTab {
+  margin-left: 0;
+  background-color: #fff
+}
+.toggle.vecTw input[type=checkbox]:checked ~ label .toggleButton {
+  background-color: #009fe3
+}
+.toggle.vecTw input[type=checkbox]:checked ~ label svg {fill:#009fe3}
+.toggle.vecFb input[type=checkbox]:checked ~ label .toggleButton {
+  background-color:#1274ba
+}
+.toggle.vecFb input[type=checkbox]:checked ~ label svg {
+  fill:#1274ba;
+  top:6px;
+  margin-left:4px
+}
+.toggle.vecFb label svg {top:10px; right:10px}
+
+/*My Devices section*/
+.devicesConfig p {
+  width:35%;
+  position:absolute;
+  right:30px;
+  top:20px;
+  text-align:right
+}
+.devicesConfig div > div {position:absolute; bottom:20px; left:20px; width:80%}
+.devicesConfig div a {margin-right:10px; float:left}
+.devicesConfig div a span.vecIconInfo {
+  position:absolute;
+  right:30px;
+  bottom:20px
+}
+.devicesConfig div input {width:175px; background-color:#eee}
+.devicesConfig div >img {border-radius:5px}
+.myDevices ol li {
+  background-color:#fff;
+  padding:15px 10px;
+  border-radius:4px;
+  margin-bottom:20px;
+  border-bottom:none;
+  box-shadow:inset 0 1px 0 #ccc
+}
+.myDevices ol li .iconsX1 {width:20px; height:20px}
+
+/*Expired elements*/
+#mainContent .expired * {color:#cbcbcb!important}
+#mainContent .expired strong {font-size:18px}
+#mainContent .expired .iconsX1 {fill:#cbcbcb!important; cursor:default}
+#mainContent .contentList li.expired:hover {box-shadow:none}
+
+/*Complete profile dialog*/
+#profile .thumbs ul li.completeProfile {
+  background-color:#dbdbdb;
+  box-shadow:inset 10px 0 0 #eee,
+  inset -10px 0 0 #eee
+}
+#profile .completeProfile img, #watchingBox .videoWatch.completeProfile img {
+ opacity:.3
+}
+#profile .sliderMask.thumbs .completeProfile .heading,
+#watchingBox .completeProfile .heading {
+  bottom: 50%;
+  height: 100px;
+  margin-bottom: -65px;
+  width: 220px;
+  text-align: center;
+  left: 50%;
+  margin-left: -110px;
+  position:absolute;
+  z-index:2
+}
+#profile .sliderMask.thumbs .completeProfile .heading a,
+#watchingBox .completeProfile .heading a {
+  bottom:0;
+  position:absolute;
+  width:100%;
+  left:0
+}
+#watchingBox .completeProfile .heading a#fadein:after {box-shadow: none}
+#home #watchingBox .videoWatch .label {
+  padding-right: 3.5em!important;
+  padding-bottom: .75em!important
+}
+#watchingBox a.pullRight.relative {width: 70px}
+
+.profileBadge {
+  background-color:#fff;
+  display:block;
+  height:220px;
+  border-radius:5px;
+  position:relative;
+  clear:both
+}
+.profileBadge p {
+  width:35%;
+  display:inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top:
+  -18px;
+  left:20%
+}
+#recommendations .profileBadge p {top:30%}
+#watchlist .profileBadge p {top:43%}
+.profileBadge img {
+  top: 50%;
+  margin-top: -87px;
+  position: absolute;
+  right: 20px
+}
+.profileBadge .iconsX2 {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: 50%;
+  margin-top: -70px;
+  left: 30px;
+  fill:#eee!important;
+  cursor:default
+}
+#mainContent .profileBadge .iconsX2:hover,
+#mainContent .profileBadge .iconsX2:hover .svgStroke {
+  visibility: visible;
+  fill:#eee
+}
+#mainContent .profileBadge .iconsX2:hover .svgFill {visibility:hidden}
+section.completeProfile:after {
+  background: rgba(238, 238, 238, .8);
+  content: "";
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0
+}
+
+/*  ------------ Sport Styles ---------------------------------------------  */
+.textVideoEspecial {
+  bottom: 12px;
+  left: 22px;
+  position:  absolute;
+  color: white !important;
+  font-weight: lighter;
+  font-size: 1.5em;
+  width: 80%
+}
+
+.bShadow {
+  -moz-box-shadow:    1px 1px 1px 2px #ccc;
+  -webkit-box-shadow: 1px 1px 1px 2px #ccc;
+  box-shadow:         1px 1px 1px 2px #ccc
+}
+
+
+/* =========== Vectors styles ============================================== */
+.vecArrowBack .arrowsBlack {fill:#000; width:6px; height:12px; z-index: 11}
+.vecArrowBack .arrows, .vecArrowBack .arrowsBlack {margin: 0 4px 0 0}
+svg.arrows {width: 100%; height: 100%}
+.vectors.vecArrowBack.negro svg.arrows {fill: #333}
+
+.vecMenuArrow {margin-left:10px}
+.vecMenuArrow path {fill: #999}
+
+.actionPrev:before {top: 50%;position: absolute;margin-top: -8px}
+#daySelector .actionPrev:before {margin-top: -7px}
+.actionNext:before, .arrows.vecIconAll:before {
+  top: 50%;
+  position: absolute;
+  margin-top: -8px;
+  left:50%;
+  margin-left:-6px
+}
+#daySelector .actionNext:before {margin: -7px 0 0 -7px}
+.actionPrev.controls:before {top:10px; left:20px; font-weight:bold}
+.actionNext.controls:before {top:10px; right:20px; font-weight:bold}
+.arrows.vecIconAll:before {
+  left: auto;
+  right: -3px;
+  position: relative;
+  margin-left: 3px;
+  margin-top: 0;
+  top: 0;
+  font-size:11px
+}
+
+/*Icons*/
+#headerHero .iconsX2 {fill: #fff; width:60px; height: 60px; z-index: 11}
+.iconsX2 .svgFill {visibility: hidden; fill:#fff; z-index: 10; cursor: pointer}
+.iconsX2:hover, #headerHero .videoWatch .iconsX2:hover {
+  fill: #333;
+  cursor: pointer
+}
+.iconsX2:hover .svgStroke, #wrapper .active .iconsX2 .svgStroke {
+  visibility: hidden
+}
+.iconsX2:hover .svgFill {visibility: visible}
+span.vectors.vecIconPlay.inactive {opacity: .3}
+
+.iconsX1, #mainContent .vecIconPlay.absolute .iconsX2,
+#mainContent .vecIconPlay.absolute .iconsX1,
+#home .vecIconPlay.absolute .iconsX2, #profile .bpM80 .close .iconsX1 {
+  fill: #fff;
+  width: 30px;
+  height: 30px
+}
+#mainContent .vecIconPlay.absolute .iconsX2 .svgFill, #home .vecIconPlay.absolute .iconsX2 .svgFill {
+  fill:transparent;
+  visibility: visible
+}
+.iconsX1 .svgFill {visibility: hidden; fill:#fff; z-index: 10}
+
+.iconsX1:hover, #wrapper .active .iconsX2 {fill: #333; cursor: pointer}
+#mainContent a:hover .vecIconPlay.absolute .iconsX2,
+#home a:hover .vecIconPlay.absolute .iconsX2 {fill: #333; cursor: pointer}
+.iconsX1:hover .svgStroke,
+#mainContent a:hover .vecIconPlay.absolute .iconsX2 .svgStroke,
+#mainContent .orderList li a:hover .vecIconPlay .iconsX1 .svgStroke {
+  visibility: hidden
+}
+.iconsX1:hover .svgFill,
+#home a:hover .vecIconPlay.absolute .iconsX2 .svgStroke,
+#home a:hover .vecIconPlay.absolute .iconsX2 .svgFill,
+#mainContent a:hover .vecIconPlay.absolute .iconsX2 .svgFill,
+.modalBox  .iconsX1:hover, #watchingBox .close .iconsX1:hover .svgFill,
+#wrapper .active .iconsX2 .svgFill, #wrapper .active:hover .iconsX2 {
+  visibility: visible;
+  fill:#fff
+}
+
+#mainContent .iconsX1:hover .svgFill, #mainContent .iconsX2:hover .svgFill,
+.orderList li a:hover .vecIconPlay .iconsX1 .svgFill,
+#wrapper .active:hover .iconsX2 .svgFill,
+#watchingBox .close .iconsX1:hover polygon {
+  visibility: visible;
+  fill:#333
+}
+#mainContent .iconsX1:hover, #mainContent .iconsX2:hover,
+#mainContent .orderList li a:hover .vecIconPlay .iconsX1 {
+  fill:#fff
+}
+
+#mainContent .iconsX1, #mainContent .iconsX2 {fill:#333}
+.contentList .iconsX1:hover .svgStroke,
+#wrapper .active:hover .iconsX2 .svgStroke {
+  visibility: visible
+}
+.contentList .iconsX1:hover .svgFill {fill:transparent!important}
+.iconsX1 .svgFill.season {visibility: visible; fill:#fff; z-index: 10}
+.iconsX1:hover .svgStrokeSeason {visibility: visible; fill: #fff}
+.videoPlayM .vecIconPlay .iconsX2, .videoPlayM .vecIconPlay .iconsX2:hover {
+ width:102px;
+ height:102px;
+ fill:#fff
+}
+.videoPlayM .vecIconPlay .iconsX2 .svgFill,
+.videoPlayM .vecIconPlay .iconsX2:hover .svgFill,
+#profile .bpM80 .close .iconsX1 .svgFill {
+  fill:transparent;
+  visibility: visible
+}
+.videoPlayM .vecIconPlay .iconsX2:hover .svgStroke {visibility: visible}
+#lifestyle .scrollingHeadSection .videoPlayM .vecIconPlay svg.iconsX2,
+#lifestyle .scrollingHeadSection .videoPlayM .vecIconPlay svg.iconsX2:hover {
+  width: 30px;
+  height: 30px;
+  margin: 35px 35px
+}
+
+.modalBox  .iconsX1, .modalBox .iconsX1:hover .svgFill,
+#profile .bpM80 .close .iconsX1:hover .svgFill {
+  fill:#333
+}
+
+.sectionBtn:hover > span .iconsX2 {fill: #333; cursor: pointer}
+.sectionBtn:hover > span .iconsX2 .svgStroke {visibility: hidden}
+.sectionBtn:hover > span .iconsX2 .svgFill {visibility: visible}
+#headerSection .headerInfo .sectionBtn:hover > span .iconsX2 {
+  fill: #fff;
+  cursor: pointer
+}
+#headerSection .sectionBtn:hover > span .iconsX2 .svgStroke {
+  visibility: hidden
+}
+#headerSection .sectionBtn:hover > span .iconsX2 .svgFill,
+.bWhite .sectionBtn:hover > span .iconsX2 path.svgStrokeShare,
+.bWhite .sectionBtn:hover > .iconsX2 rect,
+.bWhite .sectionBtn:hover > .iconsX2 rect,
+.bWhite .sectionBtn:hover > .iconsX2 path,
+#powerTip .sectionBtn:hover path.svgStrokeShare,
+#powerTip .sectionBtn:hover rect, #powerTip .sectionBtn:hover polygon,
+#headerSection .sectionBtn:hover > span .iconsX2 circle.svgFill {
+  visibility: visible;
+  fill: #fff
+}
+#headerSection .sectionBtn:hover > span .iconsX2 rect,
+#headerSection .sectionBtn:hover > span .iconsX2 path,
+#headerSection .sectionBtn:hover > span .iconsX2 polygon,
+.bWhite .sectionBtn:hover > .iconsX2 path.svgFill,
+.bWhite .sectionBtn:hover > .iconsX2 path.svgStroke,
+#powerTip .sectionBtn:hover path.svgStroke,
+#powerTip .sectionBtn:hover path.svgFill,
+#headerSection .sectionBtn:hover > span .iconsX2 circle {
+  visibility: visible;
+  fill: #333
+}
+
+#profile .bpM80 .close .iconsX1, .orderList li > span.vectors .iconsX1,
+#watchingBox .close .iconsX1 {
+  width:20px;
+  height:20px
+}
+
+#wrapper .sectionBtn.active:hover {opacity:.5}
+
+/* Reset */
+#headerSection .sectionBtn:hover > span .iconsX2.add path,
+#headerSection .sectionBtn:hover > span .iconsX2.remove path {
+  fill: initial
+}
+/* Watch + Show */
+#headerSection .headerInfo .sectionBtn:hover > span svg.iconsX2.add .icon-line, #headerSection .headerInfo .sectionBtn:hover > span svg.iconsX2.remove .icon-line {
+  fill: #333
+}
+#headerSection .headerInfo .sectionBtn:hover > span .iconsX2.add .bck,
+#headerSection .headerInfo .sectionBtn:hover > span .iconsX2.remove .bck {
+  display: block;
+  fill: #fff
+}
+#headerSection .headerInfo .sectionBtn:hover > span .iconsX2 .icon-active {
+  display: none
+}
+
+/* Profile */
+#mainContent #welcomeProfile .iconsX2:hover .bck {display: block; fill: #333}
+/* Tooltip */
+#powerTip .iconsX1:hover .bck {display: block; fill: #333}
+
+
+/*Edit dialogs*/
+#profile .bpM80 .close {right:20px; top:10px; z-index:2}
+
+/* Checkbox Styled ------  */
+.checkStyle {
+  width: 20px;
+  position: relative;
+  margin-right:10px;
+  display:inline-block
+}
+.checkStyle label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:#eee;
+  box-shadow:inset 1px 1px 1px #b2b2b2;
+  border-radius:4px
+}
+.checkStyle label:after {
+  box-sizing:content-box;
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transform:     rotate(-45deg);
+  -ms-transform:      rotate(-45deg);
+  -webkit-transform:  rotate(-45deg);
+  transform:          rotate(-45deg)
+}
+.checkStyle label:hover::after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: .3
+}
+.checkStyle input[type=checkbox] {visibility: hidden}
+.checkStyle input[type=checkbox]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1
+}
+
+/*modal on profile*/
+#profile .modalBox {padding:0}
+#profile .modalBox header, .modalBox header {
+  background-color:#eee;
+  padding:12px 20px;
+  height:54px
+}
+#profile .modalBox header span, .modalBox header span {
+  font-size:18px;
+  line-height:30px;
+  font-weight:300
+}
+#profile .modalBox .modalBody, .modalBox .modalBody {
+  padding:20px;
+  overflow:auto
+}
+#profile .profileConnect input[type="text"] {width:48%}
+#profile .modalBox label, #profile .modalBox label a {font-size:14px}
+#profile .profileConnect .social a {padding:6px 6px; margin-bottom:9px}
+.profileConnect .social .vectors svg {margin-top:2px}
+.profileConnect .social .vectors.vecTw svg {margin-top:0}
+.vectors.program svg.vectors.vecSearchIcon {
+  width: 16px;
+  margin-top: 15px!important
+}
+
+#profile .headerInfo .profileConnect .social a {
+  display:inline-block;
+  margin-bottom:0
+}
+#profile .headerInfo .profileConnect .social {border:none}
+
+a.termns {font-weight: 600;text-decoration: underline}
+
+#modalRegister {width: 660px}
+#modalRegister header span {text-transform: uppercase}
+
+/*modal browser*/
+.modalBrowser .bpm25 {margin: 0 40px}
+.modalBrowser strong {font-weight:bold}
+.modalBrowser .smallText {font-size:.9em!important}
+
+/*carousel*/
+.rs-carousel-mask {overflow:hidden}
+.rs-carousel-runner {position:relative}
+.rs-carousel-horizontal .rs-carousel-item {float:left}
+.rs-carousel-mask {position:relative}
+.rs-carousel-runner {
+  -moz-transform:   translate3d(0,0,0);
+  -webkit-transform:translate3d(0,0,0);
+  -o-transform:     translate3d(0,0,0);
+  -ms-transform:    translate3d(0,0,0);
+  transform:        translate3d(0,0,0)
+}
+.rs-carousel-transition .rs-carousel-runner {
+  -moz-transition:-moz-transform .4s ease;
+  -webkit-transition:-webkit-transform .4s ease;
+  -o-transition:-o-transform .4s ease;
+  -ms-transition:-ms-transform .4s ease;
+  transition:transform .4s ease
+}
+
+/*modal*/
+.modalBox {
+  background-color:#fff;
+  border-radius:5px;
+  overflow:auto;
+  min-width:600px;
+  max-width: 690px
+}
+.modalBox .modalHeader {
+  padding: 20px;
+  background: #eee;
+  border-bottom: #cbcbcb 1px solid
+}
+.modalBox .modalBody {padding: 20px; line-height: 21px}
+.modalBox .modalBody .close {margin-right: -10px}
+#modal p {margin-bottom:20px}
+.profileConnect .social a span {
+  display:inline-block;
+  vertical-align:middle;
+  fill: #fff
+}
+
+#modal .modalInformation p {
+  font-size: .84em;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.28em
+}
+#modal .modalInformation h5 {font-size: 2em; line-height: 30px}
+.border-bottom {border-bottom: 1px #ccc solid!important}
+.modalInformation .sectionDetail * {margin: 0}
+
+/*tooltip*/
+body .ui-tooltip {border-width: 2px;}
+.ui-tooltip {
+  padding: 8px;
+  position: absolute;
+  z-index: 9999;
+  max-width: 300px;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa
+}
+.seriesTooltip {display: none; position: absolute}
+
+#auth #modal img, #modal.wAuth img {width: 20%}
+
+/*modal pin*/
+.modalPin input[type="password"] {
+  height: 40px;
+  border-radius: 4px;
+  background: #eee;
+  color: #333;
+  box-shadow: inset -1px 1px 1px #b2b2b2;
+  border: none;
+  padding: 0 10px
+}
+
+.modalBox .modalPin .editBtn {margin-top: 0}
+
+#lifestyle #headerItem figure.bpM43.flexslider-figure {width: 43%}
+#lifestyle #headerItem .imgResponsive {width: 100%}
+#lifestyle #headerItem .headerInfo {min-height: 200px}
+
+/* -   Custom box - Modal windows  --  */
+.custombox-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition:         all .2s;
+  -webkit-transition: all .2s
+}
+
+/*Modal */
+.custombox-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-backface-visibility:  hidden;
+  -moz-backface-visibility:     hidden;
+  -ms-backface-visibility:      hidden;
+  backface-visibility:          hidden;
+  -webkit-transform:  translateY(-50%);
+  -ms-transform:      translateY(-50%);
+  transform:          translateY(-50%)
+}
+.custombox-modal {height: auto;visibility: hidden}
+
+/*Actions*/
+.custombox-show {visibility: visible}
+.custombox-show ~ .custombox-overlay {opacity: 1;visibility: visible}
+.custombox-perspective, .custombox-perspective body {
+  height: 100%;
+  overflow: hidden
+}
+.custombox-perspective body {-webkit-perspective: 600px; perspective: 600px}
+.custombox-container {min-height: 100%}
+.custombox-hide-scrollbar { overflow-y: hidden}
+.custombox-hide-scrollbar body {position: relative; overflow: hidden}
+
+/* Fade in and scale up */
+.custombox-fadein .custombox-modal-content {
+  -webkit-transform:  scale(.7);
+  -ms-transform:      scale(.7);
+  transform:          scale(.7);
+  -webkit-transition-property:  all;
+  -ms-transition-property:      all;
+  transition-property:          all;
+  opacity: 0
+}
+.custombox-show.custombox-fadein .custombox-modal-content {
+  -webkit-transform:  scale(1);
+  transform:          scale(1);
+  opacity: 1
+}
+
+/*Splash styles*/
+#splash #wrapper {padding-top:60px}
+#splash #mainLogo{display:inline-block; float:none}
+#splash h1 {
+  font-size:100px;
+  font-weight:100;
+  color:rgba(255, 255, 255, .2);
+  top:50%;
+  left:0;
+  right:0;
+  margin-top:-50px;
+  text-align:center
+}
+#splash #Footer {height:20px}
+#splash #mainWrap > p, #splash #mainWrap > p a {
+  color:#ccc;
+  font-size:12px;
+  font-weight:300;
+  margin-top:15px
+}
+#splash #mainWrap > p a {color:#fff}
+#splash .map {left:0; right:0; margin:auto}
+#splash .styledSelect {width:200px; float:none}
+#splash .styledSelect select {padding: 10px; width: 120%}
+#splash .countryChannels {
+  font-weight: 300;
+  margin-top: 13px;
+  vertical-align: top
+}
+
+/* Social BOX */
+.social-box {background: #111;width: auto; overflow: hidden}
+.social-box .top {
+  border:1px solid #222;
+  border-bottom:none;
+  padding:12px 15px 8px;
+  overflow:hidden
+}
+.social-box .top .icon {float:left; display:block; margin-right:6px}
+.social-box .top .icon svg {fill: #fff}
+.social-box .top strong {font-size:1.25em; color:#FFF}
+
+.jstwitter {height:754px; overflow:hidden; border:1px solid #222}
+.jstwitter .mediaimg {display:none}
+.jstwitter .item {
+  color:#999;
+  border-bottom:1px dotted #222!important;
+  padding:12px 20px 11px
+}
+.jstwitter .item a {color:#555!important}
+.jstwitter .tweet-wrapper a {margin-right:5px}
+
+/* MORE SECTION */
+.posterShow {position: relative}
+.posterShow li {position: absolute}
+.posterShow li:nth-child(1) {z-index: 100; position: relative}
+.posterShow li:nth-child(2) {top: 10px; left: 30%; z-index: 90}
+.posterShow li:nth-child(3) {top: 10px; right: 30%; z-index: 90}
+.posterShow li:nth-child(4) {top: 20px; left: 18%; z-index: 80}
+.posterShow li:nth-child(5) {top: 20px; right: 18%; z-index: 80}
+.posterShow li:nth-child(6) {top: 25px; left: 10%; z-index: 70}
+.posterShow li:nth-child(7) {top: 25px; right: 10%; z-index: 70}
+.posterShow li:nth-child(8) {top: 30px; left: 2%; z-index: 60}
+.posterShow li:nth-child(9) {top: 30px; right: 2%; z-index: 60}
+
+.posterShow li:nth-child(2) img, .posterShow li:nth-child(3) img {
+  max-width: 93%
+}
+.posterShow li:nth-child(4) img, .posterShow li:nth-child(5) img {
+  max-width: 85%
+}
+.posterShow li:nth-child(6) img, .posterShow li:nth-child(7) img {
+  max-width: 80%
+}
+.posterShow li:nth-child(8) img, .posterShow li:nth-child(9) img {
+  max-width: 75%
+}
+.more .vectors.vecIconProfile {width: 60px; height: 60px; margin-bottom: 18px}
+.more span.pullRight {width: 40px; height: 40px}
+.more h1, .more h2 {font-size: 3em; letter-spacing: -2px; max-width: 100%}
+.logosChannel img, .logosChannel a {margin-left: 20px}
+.logosChannel img:first-child, .logosChannel a:first-child {margin-left: 0}
+
+figure.stillImage {height: 618px; overflow: hidden}
+figure.stillImage img {margin-top: -50px}
+
+/* PRIVACY POLICY */
+#static #headerSection {height: 110px; overflow: hidden; float: none}
+#static #headerSection #headerHero .container {padding-top: 14px}
+#static #headerSection #headerHero h1 {
+  font-size: 3em;
+  letter-spacing: -1px;
+  max-width: 100%
+}
+#static #headerSection #headerHero h1 span {font-size: .42em}
+#static #mainContent p {margin-bottom: 20px}
+#static #mainContent a {font-size: 1em; font-weight: bold}
+#static #mainContent a:hover {color:#fd6c21;}
+#static #mainContent strong {font-weight: bold}
+#static #mainContent p[id] {padding-top: 100px}
+
+#player.layoutTwo p {top: 225px}
+#player.layoutOne p {top: 325px; display: block!important}
+
+#powerTip .iconsX1, #powerTip .iconsX1:hover .svgFill {fill: #333!important}
+#powerTip .iconsX1:hover {fill: #fff!important}
+#powerTip .iconsX1:hover .svgStroke {display: none}
+
+
+/* Banner PushDown Header */
+#eplAdDivpushdown {width: 960px; margin: 0 auto}
+
+/* SVG play hover en Blanco */
+#search .iconsX1:hover #playX1 .svgFill,
+#mainContent .Season a:hover .vecIconPlay.absolute .iconsX1 #playX1 .svgFill,
+#profile a:hover .vecIconPlay.absolute .iconsX1 #playX1 .svgFill,
+#mainContent a:hover .vecIconPlay .iconsX1 .svgFill {
+  visibility: visible;
+  fill:#fff
+}
+#search .iconsX1:hover #playX1 polygon,
+#mainContent .Season a:hover .vecIconPlay.absolute .iconsX1 #playX1 polygon,
+#profile a:hover .vecIconPlay.absolute .iconsX1 #playX1 polygon,
+#mainContent a:hover .vecIconPlay .iconsX1 polygon {
+  visibility: visible;
+  fill:#333
+}
+
+/* SVG play hover en Negro */
+#mainContent .contentList li .vecIconPlay .iconsX1:hover #playX1 .svgFill,
+#mainContent .contentList li .vecIconPlay .iconsX1:hover #playX1 .svgStroke,
+.ActionIcons.hiddenX a.sectionBtn:hover .vecIconInfo .iconsX1 .svgFill,
+.ActionIcons.hiddenX a.sectionBtn:hover .vecIconMyList .iconsX1 .svgFill,
+#lifestyle #headerItem a:hover .iconsX2 #printerX2 .svgFill {
+  visibility: visible!important;
+  fill: #333!important
+}
+#mainContent .contentList li .vecIconPlay .iconsX1:hover #playX1 polygon,
+#search .sectionBtn:hover .vecIconMyList .iconsX2 #addX2 rect {
+  visibility: visible;
+  fill: #fff
+}
+
+/* Hover en Gris */
+.container .bpM100 a.pullRight:hover, .authContainer li.clear a:hover {
+  color:#666;
+  fill: #666
+}
+
+.vecIconTool svg.iconsX2 {
+  fill: #eee!important;
+  width: 200px;
+  height: 165px;
+  margin-left: 260px;
+  margin-top: 20px
+}
+
+/* mobile Link */
+.mobile-link {
+  text-align: center;
+  color: white;
+  font-size: 2.5em;
+  font-weight: 100;
+  padding-top: 20px
+}
+.mobile-link svg {fill: white; height: 25px; width: 30px}
+.mobile-link a {color: white}
+/* End mobile Link */
+
+/* modal Invitation */
+.modal-invitation-tittle {
+  background: url("http://cdn.foxplay.com/sites/foxplay-la/files/img/colorfulbg.jpg") no-repeat;
+  color: white;
+  height: 200px;
+  padding: 45px 25px
+}
+
+.modal-invitation-tittle h1, .modal-invitation-tittle p {color: white}
+.modal-invitation-tittle h1 {font-size: 2em}
+.modal-invitation-tittle p {font-size: 1em}
+/* End modal Invitation */
+
+/* Home Margin */
+#home .gutterVertical10 {margin-top:0}
+
+/* Pilares FIX calles entre HL's */
+.bpM25 .row .HLboxes.gutterVertical10.Sbox {margin-bottom: 0}
+
+/* Image Responsive */
+.imgResponsive {width: 100%}
+
+/* posicion en slider */
+.slides li {position: relative}
+
+/* posicion en TOOLTIP */
+#powerTip .sectionLogo .vectors.vecLogoTheFilmZone svg,
+#powerTip .sectionLogo .vectors.vecLogoCinecanal svg {
+  width: 16px
+}
+
+/* ------------------ HOME PAGE ------------------ */
+
+/* Channels Slide */
+.channelSlide .slides {padding-bottom: 3px}
+.channelSlide .slides > li {
+  background: white;
+  box-shadow: -1px 1px 2px -2px #333;
+  height: 125px;
+  margin-right: 20px;
+  text-align: center
+}
+.channelSlide svg {height: 125px;width: 100px}
+.channelSlide .flex-direction-nav a {top: 31%}
+
+/* Continuar viendo */
+#mainContent #watchingBox {border-bottom: 1px solid #ccc}
+#mainContent #watchingBox .flexslider.relatedVideo .slides a:after {
+  -webkit-box-shadow: inset 0 -60px 100px 0 rgba(0,0,0,.75);
+  -moz-box-shadow:    inset 0 -60px 100px 0 rgba(0,0,0,.75);
+  box-shadow:         inset 0 -60px 100px 0 rgba(0,0,0,.75);
+  content: "";
+  left: 0;
+  position: absolute;top: 0;
+  z-index: 1;
+  pointer-events: none!important;
+  width: 100%;
+  height: 100%;
+  opacity: .8
+}
+
+#mainContent #watchingBox .flexslider.relatedVideo .label {padding: 10px}
+#mainContent #watchingBox .flexslider.relatedVideo .label h3 {font-weight: 700}
+#mainContent #watchingBox .flexslider.relatedVideo .label h3,
+#mainContent #watchingBox .flexslider.relatedVideo .label h4 {
+  color: #fff;
+  margin: 0
+}
+
+#mainContent #watchingBox .flexslider.relatedVideo article {height: 124px}
+
+#mainContent #watchingBox .flexslider.relatedVideo .watchedTime {
+  background: rgba(255, 255, 255, .2);
+  position: absolute;
+  left: 50%;
+  margin-left: -37%;
+  top: 50%;
+  margin-top: -5px;
+  z-index: 2
+}
+
+#mainContent #watchingBox .flexslider.relatedVideo .watchedTime .watched {
+  background: #FFF
+}
+#mainContent #watchingBox .flex-direction-nav a {top: 32%}
+
+/* ------------------ Kids ------------------ */
+
+/* Kids Character */
+.charTitle {font-size: 1.5em; font-weight: 200; top: 215px}
+.flexcharacter .slides li {margin-right: 20px; height:258px}
+
+/* ----------------- Watch ------------------ */
+/* Traileres */
+#mainContent .relatedVideo .vecIconPlay {top: 82px}
+.trailers.relatedVideo article {
+  margin-right: 20px;
+  position: relative;
+  width: 220px;
+  float: left
+}
+#movies #headerSection .layoutTwo span.vectors.vecArrowBack,
+#kids #headerSection .layoutTwo span.vectors.vecArrowBack {
+  display:inline-block
+}
+
+/* Overlay Premium */
+#player.player.layoutOne figure {max-height:100%!important}
+.onlyPremium .bpS100.bpM100.tCenter, #premium-mc-prueba {height:100%}
+.outBtn {
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid #000;
+  border-radius: 5px
+}
+#enjoyTooltip {
+  -webkit-border-radius:  50%;
+  -moz-border-radius:     50%;
+  border-radius:          50%;
+  color: #333 !important;
+  display: inline-block;
+  font-size: .7em;
+  font-weight: 700;
+  height: 21px;
+  line-height: 12px;
+  margin-left: 6px;
+  width: 21px
+}
+
+/* Overlay Mobile */
+.i-a-blocker, .i-android-blocker {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(1, 1, 1, 0.75);
+  position: absolute;
+  z-index: 100;
+  text-align:center
+}
+.i-a-blocker h2, .i-android-blocker h2 {
+  font-size: 36px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  padding-top: 60px;
+  font-weight: 200!important
+}
+.i-a-blocker p, .i-android-blocker p {
+  font-size: 25px;
+  font-weight: 200!important;
+  padding-top: 10px
+}
+.i-a-blocker img, .i-android-blocker img {width: 202px; padding-top: 35px}
+
+/* Overlay Super Premium */
+.superPremium {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(1, 1, 1, 0.75);
+  position: absolute;
+  z-index: 100;
+  text-align: center
+}
+.superPremium h2 {line-height: 38px; padding-top: 80px}
+.superPremium p {
+  font-size: 25px;
+  font-weight: 200!important;
+  padding-top: 10px;
+  padding-bottom: 50px
+}
+.superPremium a {padding: 8px 25px; color: #333!important}
+
+/* Overlay recomendaciones */
+.playerRecomendations {
+	background: rgba(0, 0, 0, .8);
+	height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+.playerRecomendations .deleteItemBtn {
+	right: 20px;
+	top: 20px;
+	z-index: 100;
+}
+.playerRecomendations li.bpS25.bpM18 {
+	display: inline-block;
+	float: none;
+}
+.playerRecomendations a.auxBtn {
+	color: #000!important;
+}
+.playerRecomendations li.bpS20.bpM20 {
+	display: inline-block;
+	float: none;
+  width: 120px;
+}
+.playerRecomendations .clips li a:hover {
+  opacity:.3;
+  transition: opacity .3s;
+}
+.playerRecomendations .clips img {
+  height: 160px;
+}
+.playerRecomendations .movies {
+	width: 100%!important;
+}
+.playerRecomendations .movies h2.p10.mt40 {
+	font-weight: 100;
+}
+.playerRecomendations .movies li {
+	padding: 0;
+	margin: 0 10px;
+}
+.playerRecomendations .movies li:hover {
+	box-shadow: 0 0 0 1px #FFF;
+}
+.playerRecomendations .movies .posterThumbs li img {
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 1199px) {
+  .playerRecomendations .movies {
+  	width: 1095px!important;
+  }
+}
+
+/* ------------------ SVG ------------------ */
+
+/* MyList */
+
+/* Reset */
+#headerSection .sectionBtn:hover > span .iconsX2.add path,
+#headerSection .sectionBtn:hover > span .iconsX2.remove path,
+#content-search .sectionBtn:hover > span .iconsX2.remove path {
+  fill: initial
+}
+/* Watch + Show */
+#headerSection .headerInfo .sectionBtn:hover > span svg.iconsX2.add .icon-line,
+#headerSection .headerInfo .sectionBtn:hover > span svg.iconsX2.remove .icon-line {
+  fill: #333
+}
+#headerSection .headerInfo .sectionBtn:hover > span .iconsX2.add .bck,
+#headerSection .headerInfo .sectionBtn:hover > span .iconsX2.remove .bck {
+  display: block;
+  fill: #fff
+}
+#headerSection .headerInfo .sectionBtn:hover > span .iconsX2 .icon-active,
+#content-search .sectionBtn:hover > span .iconsX2 .icon-active {
+  display: none
+}
+
+/* Search */
+#content-search .sectionBtn:hover > span svg.iconsX2.add .icon-line,
+#content-search .sectionBtn:hover > span svg.iconsX2.remove .icon-line {
+  fill: #fff
+}
+#content-search .sectionBtn:hover > span .iconsX2.add .bck,
+#content-search .sectionBtn:hover > span .iconsX2.remove .bck {
+  display: block;
+  fill: #333
+}
+
+/* Profile */
+#mainContent #welcomeProfile .iconsX2:hover .bck {
+  display: block;
+  fill: #333;
+}
+
+/* Tooltip */
+#powerTip .iconsX1:hover .bck {
+  display: block;
+  fill: #333;
+}
+
+/* ------------------ Flexslider FIX ------------------ */
+/* FIX para cuando el plugin aun no se cargo | Evita que los posters aparezcan width 100% y limita el UL a un alto fijo */
+.flexrelated > .slides.posterThumbs {height: 227px; overflow: hidden}
+.slides.posterThumbs > li {width: 140px}
+
+.ads .flexprogramas .slides .imgResponsive {max-width: 166px}
+aside .ads {margin-right: 320px !important}
+
+.live-label {
+  background-color: #000;
+  color: #fff!important;
+  font-size: 1.2rem;
+  left: 0;
+  position: absolute;
+  padding: 2px 5px;
+  text-transform: uppercase;
+  top: 0;
+  width: auto;
+}
+
+.labelB {
+  padding: 0 0 .5em 0;
+  position: initial;
+}
+
+.flexslider.playlist .flex-viewport ul li {
+  padding-top: 8px!important;
+  z-index:10
+}
+.playlist li .qty {
+  color: #fff!important;  
+  display: block;
+  font-family: 'roboto';
+  font-size: 1.7em;
+  font-weight: 100;
+  left:23px;
+  position: absolute;
+  top: 95px;
+}
+.playlist .vecIconPlay {bottom: 67px}
+
+.playlist .slides li::after {
+  content:'';
+  background: url(http://cdn.foxplay.com/sites/foxplay/objects/img/playlist/plframe.png) top right no-repeat;
+  position: absolute;
+  right: -8px;
+  top: 0;
+  width: 223px;
+  height: 128px;
+  z-index:-1
+}
+
+/* ================= Channel slider home =================================== */
+.channelBar {
+  margin-right: 0;
+  padding-right: 0;
+  width: 220px;
+}
+.list-channel figure {margin-bottom: 10px}
+.list-channel .pullright {margin-left: 240px}
+.list-channel .flexslider .flex-viewport ul li {padding: 0}
+.list-channel .vecIconPlay {top: 82px; right: 15px}
+.list-channel h3 {font-size: 14px; line-height: 16px}
+.list-channel .channelInfo {
+  background: #ffdd00;
+  height: 40px;
+  top: 117px;
+  width: 220px;
+}
+.list-channel .channelInfo h5 {text-align: center; margin: 0!important}
+
+/* ------------------ LANDING MOBILE ------------------ */
+
+.landing-stores {min-width: 435px; width: 435px; padding: 80px 10px}
+.landing-stores .logos-stores {margin: 40px 0}
+.landing-stores .landing-stores-h1 {max-width: 352px}
+#auth .landing-stores .landing-stores-h4 {
+  border: none;  
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 362px;
+  padding: 0;
+}
+.landing-stores .landing-stores-a,
+.landing-stores .landing-stores-h1,
+.landing-stores .landing-stores-h4 {
+  color: #333;
+  margin: 20px auto;
+}
+.landing-stores .btn-square {
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 2px;
+  color: #333;
+  font-size: 15px;
+  margin-top: 40px;
+  padding: 18px;
+  white-space: normal;
+  width: 100%;
+}
+.line-divider {
+  background-color: #ccc;
+  height: 1px;
+  margin-top: 20px;
+  width: 100%;
+}
+.landing-stores .landing-stores-o-text {
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: -7px;
+  width: 20px;  
+}
+.highmax {min-height: 650px}
+
+/* Mail verification */
+.mail-section {
+  background-color: #eee;
+  min-height: 650px;
+}
+.mail-confirmed {
+  margin: auto;
+  min-width: 435px;
+  padding: 80px 20px;
+  text-align: center;
+  width: 435px;
+}
+.mail-confirmed .mail-confirmed-h1 {
+  color: #333;
+  font-size: 32px;
+  letter-spacing: -1px;
+  margin: 20px auto;
+  max-width: 352px;
+}
+#auth .continue-btn {
+  background-color: #ff6c00;
+  border-radius: 4px;
+  border: none;  
+  box-shadow: none;
+  color: #FFF;
+  cursor: pointer;  
+  display: inline-block;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 9px 20px;
+  width: 100%;
+}
