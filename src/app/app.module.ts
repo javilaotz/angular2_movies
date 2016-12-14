@@ -6,13 +6,16 @@ import { HttpModule } 			from '@angular/http';
 import { MaterialModule } 		from '@angular/material';
 import { AlertModule } 			from 'ng2-bootstrap/ng2-bootstrap';
 
-import { AppComponent } 		from './app.component';
+
+import { AppComponent } from './app.component';
+import { PopularComponent } from './popular/popular.component';
 import { SeriesComponent } 		from './series/series.component';
 import { MainMenuComponent } 	from './main-menu/main-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PopularComponent,
     SeriesComponent,
     MainMenuComponent
   ],
