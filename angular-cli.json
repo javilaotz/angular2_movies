@@ -19,7 +19,6 @@
       "mobile": false,
       "styles": [
         "styles.css",
-        "fp_mainstyle.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css"
       ],
       "scripts": [],
