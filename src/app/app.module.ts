@@ -13,6 +13,10 @@ import { SeriesComponent } 		  from './series/series.component';
 import { MainMenuComponent } 	  from './main-menu/main-menu.component';
 import { GetPopularService }    from './get-popular.service';
 
+const appRoutes: Routes = [
+  { path: 'series', component: SeriesComponent}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +29,8 @@ import { GetPopularService }    from './get-popular.service';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    AlertModule
+    AlertModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [GetPopularService],
   bootstrap: [AppComponent]
