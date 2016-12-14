@@ -1,15 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { BrowserModule } 		from '@angular/platform-browser';
+import { NgModule } 			from '@angular/core';
+import { FormsModule } 			from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } 			from '@angular/http';
+import { MaterialModule } 		from '@angular/material';
+import { AlertModule } 			from 'ng2-bootstrap/ng2-bootstrap';
 
-import { AppComponent } from './app.component';
+import { AppComponent } 		from './app.component';
+import { SeriesComponent } 		from './series/series.component';
+import { MainMenuComponent } 	from './main-menu/main-menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SeriesComponent,
+    MainMenuComponent
   ],
   imports: [
     BrowserModule,
