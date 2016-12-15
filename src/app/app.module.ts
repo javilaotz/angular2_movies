@@ -20,9 +20,14 @@ import { MainMenuComponent }    from './main-menu/main-menu.component';
 import { MoviesComponent }      from './movies/movies.component';
 import { GetMoviesService }     from './movies/get-movies.service';
 
+import { PopularDetailComponent } from './popular-detail/popular-detail.component';
+import { GetPopularDetailService } from './popular-detail/get-popular-detail.service';
+import { YtKeyPipePipe } from './popular-detail/yt-key-pipe.pipe';
+
 const appRoutes: Routes = [
   { path: 'series', component: SeriesComponent},
   { path: 'movies', component: MoviesComponent},
+  { path: 'popular/:id', component: PopularDetailComponent},
   { path: '',       component: PopularComponent}
 ];
 
@@ -32,7 +37,9 @@ const appRoutes: Routes = [
     PopularComponent,
     SeriesComponent,
     MainMenuComponent,
-    MoviesComponent
+    MoviesComponent,
+    PopularDetailComponent,
+    YtKeyPipePipe
   ],
   imports: [
     BrowserModule,
@@ -42,7 +49,7 @@ const appRoutes: Routes = [
     AlertModule,
     RouterModule.forRoot(appRoutes, {useHash: false})
   ],
-  providers: [GetPopularService, GetSeriesService, GetMoviesService],
+  providers: [GetPopularService, GetSeriesService, GetMoviesService, GetPopularDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

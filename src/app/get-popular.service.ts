@@ -9,7 +9,7 @@ export class GetPopularService {
 	private apiKey = "1dd8fef1dd869e4fe9b1825a7a582965";
 
   constructor(private http: Http) { 
-  	console.log("a new instance of get popular service has been created");
+  	//console.log("a new instance of get popular service has been created");
   }
 
   get(): Observable<any>{

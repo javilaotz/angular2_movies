@@ -24,5 +24,5 @@ export class SeriesComponent implements OnInit {
   getUrl(src: string): string{
   	return `${this.baseUrl}${src}`;
   }
-
+ 
 }
