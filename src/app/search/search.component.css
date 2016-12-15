@@ -1,0 +1,132 @@
+body{
+	color: #333;
+    background-color: #000;
+    overflow-x: hidden !important;
+    background-position: center 100px !important;
+    background-repeat: no-repeat !important;
+}
+.headerBar {
+    background-color: #222;
+    height: 50px;
+    margin: auto;
+    max-width: 1600px;
+    -webkit-transition: height .3s;
+    transition: height .3s;
+    z-index: 99999;
+}
+.headerBar nav{
+	    float: right;
+}
+ul{
+	padding: 0;
+    margin: 0;
+    list-style: none;
+}
+li{
+    display: inline-block;
+    text-align: -webkit-match-parent;
+}
+.dropDown{
+	border-left: 1px solid #333;
+    float: left;
+    height: 50px;
+    text-align: center;
+    width: 110px;
+}
+nav .dropDown a {
+    font-size: 1.6rem;
+    font-weight: 300;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.movie_info_box{
+	font-size: 13px;
+}
+.thumb_movie_1x{
+	margin-right: 3px;
+    width: 47px;
+	height: 70px;
+    float: left;
+}
+.menuItem {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    color: #999;
+    line-height: 50px;
+}
+.dropDown:hover {
+    background-color: #111;
+    cursor: pointer;
+    color: #fff;
+}
+
+.barInner{
+	padding: 0 20px;
+}
+.search {
+    float: right;
+    position: relative;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    width: 240px;
+}
+.srchBar{
+	background-color: #333;
+    border: 0;
+    color: #999;
+    font-size: 1.6rem;
+    font-weight: 300;
+    height: 50px;
+    padding: 0 10px;
+    width: 100%;
+}
+.search .loupe {
+    position: absolute;
+    right: 13px;
+    top: 16px;
+}
+a{
+	text-decoration: none;
+}
+
+.fadein{
+    display: block;
+}
+
+.respList{
+    float: right;
+}
+
+.respList ul {
+    list-style-type:none;
+    border: 1px solid #000;
+}
+
+.respList li {
+    /*padding: 20px 0px;*/
+    line-height: 0px !important;
+    width: 100%;
+    background-color: #222;
+    z-index: 9;
+}
+
+.respList{
+    display: block;
+    height: 346px;
+    position: absolute;
+    overflow-y: auto;
+    z-index: 10;
+    padding-bottom: 12px;
+}
+.respList li{
+    color: #222;
+    height: 70px;
+}
+.respList li:hover{
+    background-color: #111;
+    cursor: pointer;
+    color: #fff;
+}
+.ui-menu-item a{
+     color: #999;
+}

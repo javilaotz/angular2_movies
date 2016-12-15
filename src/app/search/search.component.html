@@ -1,0 +1,21 @@
+<div class="search">
+	<span href="" (click)="search_qry(query_text)" class="loupe">
+		<span><svg version="1.1" class="vectors vecSearchIcon" width="20px" height="20px" viewBox="0 0 20 20">
+		<path fill="#999999" d="M19.109,17.753c-1.459-1.45-2.918-2.9-4.377-4.351c-0.066-0.064-0.135-0.117-0.203-0.164 c1.225-1.406,1.973-3.237,1.973-5.242c0-4.409-3.588-7.996-8-7.996C4.09,0,0.5,3.587,0.5,7.996s3.59,7.997,8.002,7.997 c1.501,0,2.902-0.423,4.103-1.146c0.064,0.146,0.154,0.288,0.289,0.422c1.459,1.449,2.918,2.899,4.377,4.35  C18.469,20.81,20.309,18.945,19.109,17.753z M2.513,8.014c0-3.311,2.687-6.004,5.99-6.004c3.302,0,5.987,2.693,5.987,6.004  c0,3.312-2.686,6.005-5.987,6.005C5.2,14.019,2.513,11.325,2.513,8.014z"></path>
+		</svg></span>
+	</span>
+	<input class="srchBar" [(ngModel)]="query_text"  (click)="clear_input()" placeholder="Search">
+	<div class="respList" *ngIf="visible==true">
+		<ul class="ul_search" tabindex="0" >
+			<li class="ui-menu-item" *ngFor="let person of respItems">
+				<a href="/person/{{person.id}}" class="ui-item" tabindex="-1">
+					<img class="thumb_movie_1x" src="{{getUrl(person.profile_path)}}">
+					<div class="movie_info_box">
+						<h4>{{person.name}}</h4>
+						<h5><{{person.popularity}}></h5>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
