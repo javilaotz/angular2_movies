@@ -1,0 +1,35 @@
+<section>
+	<div class="row">
+			<div class="col-md-8">
+				<div class="img_cont">
+					<span *ngFor="let img of image">
+						<img class="person_img" src="{{getUrl(img.file_path)}}">
+					</span>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="detail_box">
+					<h2> < {{detail.name}}</h2>
+					<div class="detail_overview">
+						Birthday: {{detail.birthday}} <br/>
+						Biography:{{detail.place_of_birth}}
+					</div>
+					<div class="detail_opBar">
+						Homepage: <a href="{{detail.homepage}}">{{detail.homepage}}</a>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+<section>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="">
+				<span *ngFor="let movie of credits">
+					<h1>{{movie.original_title}}</h1>
+					<h1>{{movie.release_date}}</h1>
+				</span>
+			</div>
+		</div>
+	</div>
+</section>

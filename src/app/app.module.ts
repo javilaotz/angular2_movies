@@ -27,11 +27,16 @@ import { YtKeyPipePipe }         from './popular-detail/yt-key-pipe.pipe';
 import { SearchComponent }       from './search/search.component';
 import { SearchServiceService }  from './search/search-service.service';
 
+import { PersonComponent }       from './person/person.component';
+import { GetPersonDetailsService }from './person/get-person-details.service';
+
+/*Rutas definidas (se pueden hacer por aparte pero no son suficientes)*/
 const appRoutes: Routes = [
-  { path: 'series', component: SeriesComponent},
-  { path: 'movies', component: MoviesComponent},
-  { path: 'popular/:id', component: PopularDetailComponent},
-  { path: '',       component: PopularComponent}
+  { path: 'series',       component: SeriesComponent},
+  { path: 'person/:pid',  component: PersonComponent},
+  { path: 'movies',       component: MoviesComponent},
+  { path: 'popular/:id',  component: PopularDetailComponent},
+  { path: '',             component: PopularComponent}
 ];
 
 @NgModule({
@@ -43,7 +48,8 @@ const appRoutes: Routes = [
     MoviesComponent,
     PopularDetailComponent,
     YtKeyPipePipe,
-    SearchComponent
+    SearchComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,8 @@ const appRoutes: Routes = [
     AlertModule,
     RouterModule.forRoot(appRoutes, {useHash: false})
   ],
-  providers: [GetPopularService, GetSeriesService, GetMoviesService, GetPopularDetailService, SearchServiceService],
+  /*Proveedores de servicio*/
+  providers: [GetPopularService, GetSeriesService, GetMoviesService, GetPopularDetailService, SearchServiceService, GetPersonDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

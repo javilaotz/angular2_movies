@@ -19,8 +19,7 @@ export class PopularDetailComponent implements OnInit {
 
   constructor(	private router: Router, 
   				private route: ActivatedRoute, 
-  				private details: GetPopularDetailService,
-  				private videos: GetPopularDetailService
+  				private details: GetPopularDetailService
   			  ) { }
 
   ngOnInit() {
@@ -37,7 +36,7 @@ export class PopularDetailComponent implements OnInit {
   }
 
   get_video():any{
-  	this.videos.get_videos(this.id).subscribe(response => {
+  	this.details.get_videos(this.id).subscribe(response => {
        this.key = response[0].key;
     });
   }
