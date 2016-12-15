@@ -8,14 +8,22 @@ import { AlertModule } 			    from 'ng2-bootstrap/ng2-bootstrap';
 
 
 import { AppComponent }         from './app.component';
+
 import { PopularComponent }     from './popular/popular.component';
-import { SeriesComponent } 		  from './series/series.component';
-import { MainMenuComponent } 	  from './main-menu/main-menu.component';
 import { GetPopularService }    from './get-popular.service';
+
+import { SeriesComponent }      from './series/series.component';
+import { GetSeriesService }     from './series/get-series.service';
+
+import { MainMenuComponent }    from './main-menu/main-menu.component';
+
+import { MoviesComponent }      from './movies/movies.component';
+import { GetMoviesService }     from './movies/get-movies.service';
 
 const appRoutes: Routes = [
   { path: 'series', component: SeriesComponent},
-  { path: '', component: PopularComponent}
+  { path: 'movies', component: MoviesComponent},
+  { path: '',       component: PopularComponent}
 ];
 
 @NgModule({
@@ -23,7 +31,8 @@ const appRoutes: Routes = [
     AppComponent,
     PopularComponent,
     SeriesComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +42,7 @@ const appRoutes: Routes = [
     AlertModule,
     RouterModule.forRoot(appRoutes, {useHash: false})
   ],
-  providers: [GetPopularService],
+  providers: [GetPopularService, GetSeriesService, GetMoviesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

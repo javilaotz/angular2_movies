@@ -1,0 +1,15 @@
+<section class="popular">
+	<h1>All Series</h1>
+	<div class="row">
+		<div class="col-md-2 popular_1" *ngFor="let single_movie of movies">
+			<a href="#" class="item_bg">
+				<div>
+					<img class="thumb_movie" src="{{getUrl(single_movie.poster_path)}}">
+					<div class="item_titulo">
+						<h4>{{single_movie.title}}</h4>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</section>
