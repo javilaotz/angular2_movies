@@ -8,7 +8,7 @@ import { GetPersonDetailsService }from './get-person-details.service';
   templateUrl: './person.component.html',
   styleUrls: ['./person.component.css']
 })
-export class PersonComponent implements OnInit {
+export class PersonComponent implements OnInit, OnChanges {
 	public pid: number;
 	public detail = [];
   public image = [];
@@ -21,7 +21,7 @@ export class PersonComponent implements OnInit {
 
   constructor(	private router: Router, 
   				private route: ActivatedRoute, 
-  				private details: GetPersonDetailsService
+  				private details: GetPersonDetailsService,
   			 ) { }
 
   ngOnInit() {
@@ -36,6 +36,21 @@ export class PersonComponent implements OnInit {
   	/* Call to get_movie_credits function=>GetPersonDetailsService */
   	this.get_movie_credits(this.pid);
   }
+
+  ngOnChanges(changes: SimpleChanges):any{
+    this.route.params.subscribe((param: any) => {this.pid=param.pid});
+
+    /* Call to get_details function=>GetPersonDetailsService */
+    this.get_details(this.pid);
+    
+    /* Call to get_images function=>GetPersonDetailsService */
+    this.get_images(this.pid);
+    
+    /* Call to get_movie_credits function=>GetPersonDetailsService */
+    this.get_movie_credits(this.pid);
+  }
+
+
 
   /*
 	get_details function

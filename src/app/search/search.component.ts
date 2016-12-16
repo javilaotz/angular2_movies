@@ -29,6 +29,7 @@ export class SearchComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges):any{
+    this.clear_input();
   	this.search_qry(changes);
   	
   }
@@ -47,6 +48,7 @@ export class SearchComponent implements OnInit, OnChanges {
   }
 
   clear_input(){
+    this.respItems = [];
   	this.visible = false;
   	this.query_text="";
   }
