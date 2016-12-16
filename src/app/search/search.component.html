@@ -8,7 +8,7 @@
 	<div class="respList" *ngIf="visible==true">
 		<ul class="ul_search" tabindex="0" >
 			<li class="ui-menu-item" *ngFor="let person of respItems">
-				<a href="/person/{{person.id}}" class="ui-item" tabindex="-1">
+				<a [routerLink]="['/person', person.id]" class="ui-item">
 					<img class="thumb_movie_1x" src="{{getUrl(person.profile_path)}}">
 					<div class="movie_info_box">
 						<h4>{{person.name}}</h4>

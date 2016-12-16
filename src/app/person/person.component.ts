@@ -15,6 +15,10 @@ export class PersonComponent implements OnInit {
 	public credits = [];
 	public imgUrl = "https://image.tmdb.org/t/p/w300_and_h450_bestv2/";
 
+  public inArray = [];
+  public outArray = [];
+
+
   constructor(	private router: Router, 
   				private route: ActivatedRoute, 
   				private details: GetPersonDetailsService
@@ -60,7 +64,16 @@ export class PersonComponent implements OnInit {
   */
   get_movie_credits(pid: number):any{
 	this.details.get_movieCredits(this.pid).subscribe(response => {
+       this.sort_array(response);
        this.credits = response;
+    });
+  }
+
+  sort_array(data: any):any{
+    return this.outArray = data.sort(function(a:any,b:any){
+        let dateB = new Date(b.release_date);
+        let dateA = new Date(a.release_date);
+      return dateB.getTime() - dateA.getTime() ;
     });
   }
 

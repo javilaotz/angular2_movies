@@ -19,7 +19,9 @@ export class SearchComponent implements OnInit, OnChanges {
 	baseUrl = "https://image.tmdb.org/t/p/w300_and_h450_bestv2/";
 	urlimg = "";
 
-  constructor(private respList: SearchServiceService) { }
+  constructor(private router: Router, 
+              private route: ActivatedRoute,
+              private respList: SearchServiceService, ) { }
 
   ngOnInit() {
   }
@@ -55,5 +57,11 @@ export class SearchComponent implements OnInit, OnChanges {
   		this.urlimg = `${this.baseUrl}${src}`;
   	}
   	return this.urlimg;
+  }
+
+  gotoPerson(id:number):any{
+    console.log("creo que ya está dentro pero con el id: "+id);
+    this.clear_input();
+    this.router.navigate(['/person', id]);
   }
 }
