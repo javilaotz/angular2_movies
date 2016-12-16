@@ -6,6 +6,7 @@
 			<div class="col-md-4">
 				<div class="detail_box">
 					<h2> < {{detail.original_title}}</h2>
+					<span *ngFor="let genres of detail.genres" class="label label-info">{{genres.name}}</span>
 					<div class="detail_overview">   {{detail.overview}}</div>
 					<div class="detail_opBar">   Homepage: <a href="{{detail.homepage}}" target="_blank">{{detail.homepage}}</a></div>
 				</div>

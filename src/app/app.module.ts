@@ -15,6 +15,9 @@ import { GetPopularService }    from './get-popular.service';
 import { SeriesComponent }      from './series/series.component';
 import { GetSeriesService }     from './series/get-series.service';
 
+import { SeriesDetailComponent } from './series-detail/series-detail.component';
+import { GetSeriesDetailService } from './series-detail/get-series-detail.service';
+
 import { MainMenuComponent }    from './main-menu/main-menu.component';
 
 import { MoviesComponent }      from './movies/movies.component';
@@ -30,9 +33,10 @@ import { SearchServiceService }  from './search/search-service.service';
 import { PersonComponent }       from './person/person.component';
 import { GetPersonDetailsService }from './person/get-person-details.service';
 
-/*Rutas definidas (se pueden hacer por aparte pero no son suficientes)*/
+/*Rutas definidas (se pueden hacer por aparte pero no son tantas como para hacerlo)*/
 const appRoutes: Routes = [
   { path: 'series',       component: SeriesComponent},
+  { path: 'series/:sid',  component: SeriesDetailComponent},
   { path: 'person/:pid',  component: PersonComponent},
   { path: 'movies',       component: MoviesComponent},
   { path: 'popular/:id',  component: PopularDetailComponent},
@@ -49,7 +53,8 @@ const appRoutes: Routes = [
     PopularDetailComponent,
     YtKeyPipePipe,
     SearchComponent,
-    PersonComponent
+    PersonComponent,
+    SeriesDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, {useHash: false})
   ],
   /*Proveedores de servicio*/
-  providers: [GetPopularService, GetSeriesService, GetMoviesService, GetPopularDetailService, SearchServiceService, GetPersonDetailsService],
+  providers: [GetPopularService, GetSeriesService, GetMoviesService, GetPopularDetailService, SearchServiceService, GetPersonDetailsService, GetSeriesDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

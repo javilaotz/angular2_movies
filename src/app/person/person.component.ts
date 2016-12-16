@@ -9,7 +9,6 @@ import { GetPersonDetailsService }from './get-person-details.service';
   styleUrls: ['./person.component.css']
 })
 export class PersonComponent implements OnInit, OnChanges {
-	public pid: number;
 	public detail = [];
   public image = [];
 	public credits = [];
@@ -18,14 +17,18 @@ export class PersonComponent implements OnInit, OnChanges {
   public inArray = [];
   public outArray = [];
 
+  public pid: number;
+
 
   constructor(	private router: Router, 
   				private route: ActivatedRoute, 
   				private details: GetPersonDetailsService,
-  			 ) { }
+  			 ) {}
 
   ngOnInit() {
   	this.route.params.subscribe((param: any) => {this.pid=param.pid});
+    console.log("nuevo id: "+this.pid);
+
 
   	/* Call to get_details function=>GetPersonDetailsService */
   	this.get_details(this.pid);
@@ -37,19 +40,7 @@ export class PersonComponent implements OnInit, OnChanges {
   	this.get_movie_credits(this.pid);
   }
 
-  ngOnChanges(changes: SimpleChanges):any{
-    this.route.params.subscribe((param: any) => {this.pid=param.pid});
-
-    /* Call to get_details function=>GetPersonDetailsService */
-    this.get_details(this.pid);
-    
-    /* Call to get_images function=>GetPersonDetailsService */
-    this.get_images(this.pid);
-    
-    /* Call to get_movie_credits function=>GetPersonDetailsService */
-    this.get_movie_credits(this.pid);
-  }
-
+  ngOnChanges(changes: SimpleChanges):any{}
 
 
   /*
@@ -90,6 +81,10 @@ export class PersonComponent implements OnInit, OnChanges {
         let dateA = new Date(a.release_date);
       return dateB.getTime() - dateA.getTime() ;
     });
+  }
+
+  gotoMovie(movieId:number):any{
+    this.router.navigate(['/movie', movieId]);
   }
 
   getUrl(src: string): string{

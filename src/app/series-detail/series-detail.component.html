@@ -1,0 +1,18 @@
+<section>
+	<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-2">
+				<img class="img_content" src="{{getUrl(tv.poster_path)}}">
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-4">
+				<div class="detail_box">
+					<h2> < {{tv.name}} | {{tv.vote_average}}</h2>
+					<span *ngFor="let genres of tv.genres" class="label label-info">{{genres.name}}</span>
+					<div class="detail_overview">   {{tv.overview}}</div>
+					<div class="detail_opBar">   Homepage: <a href="{{tv.homepage}}" target="_blank">{{tv.homepage}}</a></div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+	</div>
+</section>

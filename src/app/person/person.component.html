@@ -2,7 +2,7 @@
 	<div class="row">
 			<div class="col-md-8">
 				<div class="col-md-4">
-					
+									
 				</div>
 				<div class="col-md-8 img_cont">
 					<span *ngFor="let img of image">
@@ -15,31 +15,23 @@
 					<h2> < {{detail.name}}</h2>
 					<div class="detail_overview">
 						Birthday: {{detail.birthday}} <br/>
-						From: {{detail.place_of_birth}}
+						From: {{detail.place_of_birth}} <br/>
+						Homepage: <a href="{{detail.homepage}}" target="_blank">{{detail.homepage}}</a>
 					</div>
+					<h2 style="color:#fff;"> < Interpretations</h2>
+					<div class="credits_box">						
+						<span *ngFor="let movie of credits">
+							<ul class="list-group">
+							  <li class="list-group-item"> 
+							  	{{movie.release_date}} > <a routerLink="/popular/{{movie.id}}">{{movie.original_title}}</a> as {{movie.character}}
+							  </li>
+							</ul>
+						</span>
+					</div>	
 					<div class="detail_opBar">
-						Homepage: <a [routerLink]="['', detail.homepage]">{{detail.homepage}}</a>
+						ScrollDown to see more movies
 					</div>
 				</div>
 			</div>
-	</div>
-</section>
-<section>
-	<div class="row white">
-		<div class="col-md-8">
-			<h1>crew</h1>
-		</div>
-		<div class="col-md-4">
-			<div class="credits_box">
-				<h1>Interpretations</h1>
-				<span *ngFor="let movie of credits">
-					<ul class="list-group">
-					  <li class="list-group-item"> 
-					  	{{movie.release_date}} > <a [routerLink]="['/movie/', movie.id]">{{movie.original_title}}</a> as {{movie.character}}
-					  </li>
-					</ul>
-				</span>
-			</div>
-		</div>
 	</div>
 </section>

@@ -2,7 +2,7 @@
 	<h1>All Movies</h1>
 	<div class="row">
 		<div class="col-md-2 popular_1" *ngFor="let single_movie of movies">
-			<a href="#" class="item_bg">
+			<a [routerLink]="['/popular', single_movie.id]" class="item_bg">
 				<div>
 					<img class="thumb_movie" src="{{getUrl(single_movie.poster_path)}}">
 					<div class="item_titulo">

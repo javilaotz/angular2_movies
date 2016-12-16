@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
+
 import { SearchServiceService }  from './search-service.service';
 
 
@@ -18,6 +19,7 @@ export class SearchComponent implements OnInit, OnChanges {
 	respItems = [];
 	baseUrl = "https://image.tmdb.org/t/p/w300_and_h450_bestv2/";
 	urlimg = "";
+  sub:any;
   public pid:number;
 
   constructor(private router: Router, 
@@ -26,12 +28,13 @@ export class SearchComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.route.params.subscribe((param: any) => {this.pid = param.pid;});
+    
   }
 
   ngOnChanges(changes: SimpleChanges):any{
     this.clear_input();
-  	this.search_qry(changes);
-  	
+    this.gotoPerson(this.pid);    
+    this.search_qry(changes);  
   }
 
   search_qry(qry: any): any{
@@ -65,7 +68,7 @@ export class SearchComponent implements OnInit, OnChanges {
 
   gotoPerson(pid:number):any{
     console.log("creo que ya está dentro pero con el id: "+pid);
-    this.clear_input();
     this.router.navigate(['/person', pid]);
+    this.clear_input();
   }
 }
