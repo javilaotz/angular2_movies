@@ -12,11 +12,13 @@ export class SearchServiceService {
   constructor(private http: Http) { }
 
   get_multi(query: string): Observable<any>{
-  	this.requestUrl = `${this.url}?api_key=${this.apiKey}${this.urlSuffix}${query}`;
-  	return this.http.get(this.requestUrl)
-  	.map(response => {
-  			return response.json().results;
-  		});
+    if(query!=null) {
+    	this.requestUrl = `${this.url}?api_key=${this.apiKey}${this.urlSuffix}${query}`;
+    	return this.http.get(this.requestUrl)
+    	.map(response => {
+    			return response.json().results;
+    		});
+    }
   }
 
 }

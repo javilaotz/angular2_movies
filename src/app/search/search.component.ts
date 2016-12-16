@@ -18,12 +18,14 @@ export class SearchComponent implements OnInit, OnChanges {
 	respItems = [];
 	baseUrl = "https://image.tmdb.org/t/p/w300_and_h450_bestv2/";
 	urlimg = "";
+  public pid:number;
 
   constructor(private router: Router, 
               private route: ActivatedRoute,
               private respList: SearchServiceService, ) { }
 
   ngOnInit() {
+    this.route.params.subscribe((param: any) => {this.pid = param.pid;});
   }
 
   ngOnChanges(changes: SimpleChanges):any{
@@ -59,9 +61,9 @@ export class SearchComponent implements OnInit, OnChanges {
   	return this.urlimg;
   }
 
-  gotoPerson(id:number):any{
-    console.log("creo que ya está dentro pero con el id: "+id);
+  gotoPerson(pid:number):any{
+    console.log("creo que ya está dentro pero con el id: "+pid);
     this.clear_input();
-    this.router.navigate(['/person', id]);
+    this.router.navigate(['/person', pid]);
   }
 }
