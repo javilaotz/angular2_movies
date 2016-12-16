@@ -5,9 +5,11 @@
 									
 				</div>
 				<div class="col-md-8 img_cont">
-					<span *ngFor="let img of image">
-						<img class="person_img" src="{{getUrl(img.file_path)}}">
-					</span>
+					<ul>
+						<li *ngFor="let img of image">
+							<img class="person_img" src="{{getUrl(img.file_path)}}">
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div class="col-md-4">
